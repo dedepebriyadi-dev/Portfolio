@@ -732,6 +732,10 @@ nav:has(.mb:hover) .brand{color:#8a8a8a!important}
 /* credits */
 .pgcr{display:flex;flex-wrap:wrap;gap:16px clamp(28px,5vw,72px);margin:-4px 0 clamp(20px,3vw,32px);font-size:clamp(16px,1.6vw,20px);font-weight:500;line-height:1.2}
 .pgcr small{display:block;color:#fff;font-size:inherit;font-weight:400;margin-bottom:6px;opacity:.6}
+
+/* motion */
+.pgv{margin-top:clamp(12px,2vw,24px)}
+.pgv video{display:block;width:100%;aspect-ratio:16/9;background:#000;object-fit:cover}
 </style>
 </head>
 <body>
@@ -849,7 +853,7 @@ const TH={"prj2026":"assets/images/th-13.jpg","roomi-feed":"assets/images/th-1.j
 var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return [].slice.call((r||document).querySelectorAll(s))};
 var reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
 var W=[
-{k:'prj2026',c:'roomi',t:'ROOMI ACTIVATION at PRJ 2026',m:'Roomi × TANAKA · 2026',d:'Materi visual aktivasi booth ROOMI × TANAKA di Jakarta Fair 2026 (PRJ): Crazy Sale, Lucky Spin, tantangan UGC di TikTok, hadiah untuk pengunjung, serta promo produk Debellin dan Pentonic.',g:'linear-gradient(135deg,#6aa8f4,#f4a3c8)',x:'#0b2b5b',cr:[['Graphic Design','Arif Nur Fadhila, Dimas Wahyu Mubarak'],['Motion Design','Dede Pebriyadi']]},
+{k:'prj2026',c:'roomi',t:'ROOMI ACTIVATION at PRJ 2026',m:'Roomi × TANAKA · 2026',d:'Materi visual aktivasi booth ROOMI × TANAKA di Jakarta Fair 2026 (PRJ): Crazy Sale, Lucky Spin, tantangan UGC di TikTok, hadiah untuk pengunjung, serta promo produk Debellin dan Pentonic.',g:'linear-gradient(135deg,#6aa8f4,#f4a3c8)',x:'#0b2b5b',cr:[['Graphic Design','Arif Nur Fadhila, Dimas Wahyu Mubarak'],['Motion Design','Dede Pebriyadi']],v:'assets/videos/prj2026-activation.mp4',vp:'assets/images/prj2026-video-poster.jpg'},
 {k:'roomi-feed',c:'roomi',t:'Roomi Feed & Ads',m:'Roomi · 2024',d:'Feed Instagram, iklan digital, dan banner untuk promo seperti Christmas Gift Sale dan 12.12 Mega Sale.',g:'linear-gradient(135deg,#7a4fd0,#e2509a)',x:'#fff'},
 {k:'roomi-flyer',c:'roomi',t:'Roomi Flyer & Roll Up',m:'Roomi · 2024',d:'Flyer lipat, materi pembukaan toko, dan roll up banner untuk koleksi speaker dan produk rumah pintar.',g:'linear-gradient(135deg,#aab3c4,#f0e2d2)',x:'#1b2a35'},
 {k:'roomi-pack',c:'roomi',t:'Roomi Packaging',m:'Roomi · 2024–2025',d:'Dieline dan artwork kemasan Opus, Aero Dry, power bank Ion Slim dan Ion Pro, serta Aero Stand Pro.',g:'linear-gradient(135deg,#e6d2b8,#b98f62)',x:'#2a1d10'},
@@ -1032,6 +1036,11 @@ function openPage(o){lastF=document.activeElement;pgb.innerHTML='';
   for(var i=from;i<o.imgs.length;i++){(function(i){var c=mk('div','gi'),b=mk('button','gb');b.setAttribute('aria-label',o.t+' gambar '+(i+1));
    b.appendChild(img((o.thumbs&&o.thumbs[i])||o.imgs[i],o.t+' '+(i+1),true));b.onclick=function(){viewer(po,i)};c.appendChild(b);var nn=i-from+1;c.appendChild(mk('span','gn',(nn<10?'0':'')+nn));s.appendChild(c)})(i)}
   pgb.appendChild(s)}
+ if(o.video){var vb=mk('div','pgv'),vd=document.createElement('video');vd.src=o.video.src;vd.poster=o.video.poster;vd.muted=true;vd.defaultMuted=true;vd.loop=true;vd.playsInline=true;vd.setAttribute('playsinline','');vd.setAttribute('muted','');vd.preload='metadata';vd.setAttribute('aria-label',o.t+' motion');
+  vb.appendChild(vd);vb.appendChild(mk('span','gn','Motion'));pgb.appendChild(vb);
+  if(reduce)vd.controls=true;
+  else if('IntersectionObserver' in window){var vio=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){var pr=vd.play();if(pr&&pr.catch)pr.catch(function(){})}else vd.pause()})},{root:pg,threshold:.25});vio.observe(vd)}
+  else vd.autoplay=true}
  var e=mk('div','pgend');var b=mk('button','mb','Kembali ke daftar');b.id='pg-back';b.onclick=closePage;e.appendChild(b);pgb.appendChild(e);
  pg.hidden=false;pg.scrollTop=0;document.body.style.overflow='hidden';
  requestAnimationFrame(function(){requestAnimationFrame(function(){pg.classList.add('open')})});$('#pg-x').focus({preventScroll:true});
@@ -1042,7 +1051,7 @@ function openPage(o){lastF=document.activeElement;pgb.innerHTML='';
 function closePage(){if(!$('#vw').hidden)vclose();pg.classList.remove('open');setTimeout(function(){pg.hidden=true;pgb.innerHTML='';if(document.getElementById('al').hidden)document.body.style.overflow='';if(lastF)lastF.focus({preventScroll:true})},reduce?0:300)}
 $('#pg-x').onclick=closePage;
 addEventListener('keydown',function(e){if(pg.hidden||!$('#vw').hidden)return;if(e.key==='Escape')closePage();else if(e.key==='Tab'){var f=[$('#pg-x'),$('#pg-back')].filter(Boolean),i=f.indexOf(document.activeElement);e.preventDefault();f[(i+(e.shiftKey?-1:1)+f.length)%f.length].focus()}});
-window.openProject=function(w){var c=CL[w.k]||['',''],cols=[['Klien',c[0]],['Kategori',CAT[w.c]||'']];if(c[1])cols.push(['Tahun',c[1]]);openPage({t:w.t,cols:cols,cr:w.cr,imgs:IMG[w.k],thumbs:(window.GT&&GT[w.k])||null,hero:!(w.k==='plangon'||w.k==='gwk'),d:w.d,g:w.g})};
+window.openProject=function(w){var c=CL[w.k]||['',''],cols=[['Klien',c[0]],['Kategori',CAT[w.c]||'']];if(c[1])cols.push(['Tahun',c[1]]);openPage({t:w.t,cols:cols,cr:w.cr,video:w.v?{src:w.v,poster:w.vp}:null,imgs:IMG[w.k],thumbs:(window.GT&&GT[w.k])||null,hero:!(w.k==='plangon'||w.k==='gwk'),d:w.d,g:w.g})};
 var xl=$('#xlist');
 E.forEach(function(e){var a=mk('div','xi');a.tabIndex=0;a.setAttribute('role','button');a.setAttribute('aria-label','Buka karya '+e.t);a.style.setProperty('--g',e.g);
  var cv=mk('div','xim');var L=LOGO[e.lg];cv.style.backgroundImage='url("'+L.src+'")';cv.style.backgroundColor=L.bg;cv.style.backgroundSize=L.sz;cv.style.backgroundRepeat='no-repeat';cv.style.backgroundPosition='center';a.appendChild(cv);
