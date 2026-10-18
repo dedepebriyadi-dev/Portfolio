@@ -730,12 +730,24 @@ nav:has(.mb:hover) .brand{color:#8a8a8a!important}
 .giant{margin-bottom:0!important;padding-bottom:0!important}
 
 /* credits */
-.pgcr{display:flex;flex-wrap:wrap;gap:16px clamp(28px,5vw,72px);margin:-4px 0 clamp(20px,3vw,32px);font-size:clamp(16px,1.6vw,20px);font-weight:500;line-height:1.2}
+.pgcr{display:grid;gap:16px;margin:0 0 clamp(20px,3vw,32px);font-size:clamp(16px,1.6vw,20px);font-weight:500;line-height:1.2}
 .pgcr small{display:block;color:#fff;font-size:inherit;font-weight:400;margin-bottom:6px;opacity:.6}
 
 /* motion */
 .pgv{margin-top:clamp(12px,2vw,24px)}
 .pgv video{display:block;width:100%;aspect-ratio:16/9;background:#000;object-fit:cover}
+.pgc.cr small{opacity:1}.pgc .nm{font-weight:inherit;display:inline}.pgc .cm{font-style:normal}
+@media(max-width:760px){.pgc .nm{display:block}.pgc .cm{display:none}.pgc.cr{grid-column:1/-1}}
+
+/* about (desktop): name half over the photo, aligned with the back button */
+@media(min-width:900px){
+ .ab{--abt:clamp(120px,15.5vw,260px);--abdy:0px}
+ .ab .abb{padding-top:0!important}
+ .ab .abb .abw{position:relative;display:block;margin:0!important}
+ .ab .abb .abw .abt{position:absolute!important;left:0;top:calc(-54px - var(--abt)*.055);z-index:3;font-size:var(--abt)!important;line-height:.88!important;margin:0!important}
+ .ab .abb .abw .abp{position:relative!important;z-index:1;margin:0 0 clamp(48px,7vw,100px) auto!important;width:min(calc(100% - var(--abt)*1.75),1250px)!important}
+ .ab .abb .abw .abp img{aspect-ratio:1/1.05!important}
+}
 </style>
 </head>
 <body>
@@ -820,7 +832,6 @@ nav:has(.mb:hover) .brand{color:#8a8a8a!important}
   <div class="abs"><span class="abl">(Kontak)</span><div class="abk"><a href="https://wa.me/6281944245544">WhatsApp</a><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=dedepebriyadi@gmail.com" target="_blank" rel="noopener">Email</a></div></div>
   <div class="abs"><span class="abl">(Sosial)</span><div class="abk"><a href="https://www.behance.net/Pebriyadi04" target="_blank" rel="noopener">Behance</a><a href="https://www.linkedin.com/in/dede-pebriyadi-536b2b266/" target="_blank" rel="noopener">LinkedIn</a></div></div>
   <div class="abs"><span class="abl">(Lokasi)</span><div class="abk"><span>BDG/JKT/IDN</span></div></div>
-  <div class="abs"><span class="abl">(Tautan)</span><div class="abk"><a href="https://drive.google.com/file/d/12wmyh1P-7VOAS-Mltr_djPmGUkZBCzHF/view?usp=drivesdk" target="_blank" rel="noopener">Portofolio PDF</a></div></div>
  </div>
 </div>
 <div class="pg" id="pg" role="dialog" aria-modal="true" aria-labelledby="pgt" hidden>
@@ -853,7 +864,7 @@ const TH={"prj2026":"assets/images/th-13.jpg","roomi-feed":"assets/images/th-1.j
 var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return [].slice.call((r||document).querySelectorAll(s))};
 var reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
 var W=[
-{k:'prj2026',c:'roomi',t:'ROOMI ACTIVATION at PRJ 2026',m:'Roomi × TANAKA · 2026',d:'Materi visual aktivasi booth ROOMI × TANAKA di Jakarta Fair 2026 (PRJ): Crazy Sale, Lucky Spin, tantangan UGC di TikTok, hadiah untuk pengunjung, serta promo produk Debellin dan Pentonic.',g:'linear-gradient(135deg,#6aa8f4,#f4a3c8)',x:'#0b2b5b',cr:[['Graphic Design','Arif Nur Fadhila, Dimas Wahyu Mubarak'],['Motion Design','Dede Pebriyadi']],v:'assets/videos/prj2026-activation.mp4',vp:'assets/images/prj2026-video-poster.jpg'},
+{k:'prj2026',c:'roomi',t:'ROOMI ACTIVATION at PRJ 2026',m:'Roomi × TANAKA · 2026',d:'Materi visual aktivasi booth ROOMI × TANAKA di Jakarta Fair 2026 (PRJ): Crazy Sale, Lucky Spin, tantangan UGC di TikTok, hadiah untuk pengunjung, serta promo produk Debellin dan Pentonic.',g:'linear-gradient(135deg,#6aa8f4,#f4a3c8)',x:'#0b2b5b',cr:[['Graphic Design','Arif Nur Fadhila|Dimas Wahyu Mubarak'],['Motion Design','Dede Pebriyadi']],v:'assets/videos/prj2026-activation.mp4',vp:'assets/images/prj2026-video-poster.jpg'},
 {k:'roomi-feed',c:'roomi',t:'Roomi Feed & Ads',m:'Roomi · 2024',d:'Feed Instagram, iklan digital, dan banner untuk promo seperti Christmas Gift Sale dan 12.12 Mega Sale.',g:'linear-gradient(135deg,#7a4fd0,#e2509a)',x:'#fff'},
 {k:'roomi-flyer',c:'roomi',t:'Roomi Flyer & Roll Up',m:'Roomi · 2024',d:'Flyer lipat, materi pembukaan toko, dan roll up banner untuk koleksi speaker dan produk rumah pintar.',g:'linear-gradient(135deg,#aab3c4,#f0e2d2)',x:'#1b2a35'},
 {k:'roomi-pack',c:'roomi',t:'Roomi Packaging',m:'Roomi · 2024–2025',d:'Dieline dan artwork kemasan Opus, Aero Dry, power bank Ion Slim dan Ion Pro, serta Aero Stand Pro.',g:'linear-gradient(135deg,#e6d2b8,#b98f62)',x:'#2a1d10'},
@@ -868,7 +879,7 @@ var W=[
 {k:'bj',c:'sosmed',t:'bahasajerman.id',m:'Media sosial',d:'Konten belajar kosakata transportasi dan cara menyebut jam, mudah dibaca dan disimpan.',g:'linear-gradient(135deg,#2a3c9a,#4a68d8)',x:'#fff'}
 ];
 window.PW=W;var X=[
-{time:'Aug 2024 – sekarang',t:'Desainer Grafis & Brand',co:'Roomi Indonesia',sub:'PT. Sumber Digital Media',li:['Desain media sosial yang selaras dengan identitas brand.','Poster, banner digital, dan materi promosi event perusahaan.','Kemasan produk serta materi visual untuk toko offline.','Aset event seperti backdrop dan flyer.'],g:'linear-gradient(135deg,#7a4fd0,#e2509a)',x:'#fff',acts:[['Lihat karya Roomi','f','roomi'],['Buka galeri kemasan','o','roomi-pack']]},
+{time:'Aug 2024 – sekarang',t:'Desainer Grafis & Brand',co:'Roomi Indonesia',sub:'PT. Sumber Digital Media',li:['Motion design dan materi visual aktivasi booth ROOMI × TANAKA di Jakarta Fair (PRJ) 2026.','Desain media sosial yang selaras dengan identitas brand.','Poster, banner digital, dan materi promosi event perusahaan.','Kemasan produk serta materi visual untuk toko offline.','Aset event seperti backdrop dan flyer.'],g:'linear-gradient(135deg,#7a4fd0,#e2509a)',x:'#fff',acts:[['Buka ROOMI Activation at PRJ 2026','p','prj2026'],['Lihat karya Roomi','f','roomi'],['Buka galeri kemasan','o','roomi-pack']]},
 {time:'Nov 2023 – Feb 2024',t:'Advertising Designer',co:'Memo Multimedia',sub:'PT. Memo Multimedia Organizer',li:['Konten harian media sosial, dari informatif sampai promosi.','Konsistensi identitas visual di semua platform.'],g:'linear-gradient(135deg,#4a3fa8,#2b6fc0)',x:'#fff',acts:[['Buka galeri Memo','o','memo'],['Semua karya media sosial','f','sosmed']]},
 {time:'Mar 2023 – Jun 2023',t:'Advertising Designer',co:'Oz Radio Bandung',sub:'Proposal kerja sama dan company profile',li:['Menyusun tangga lagu mingguan untuk program siaran.','Proposal untuk sponsor, brand, dan event organizer.','Pembaruan company profile Oz Radio.'],g:'linear-gradient(135deg,#f0b92c,#f4893a)',x:'#2b1700',acts:[['Buka company profile','o','oz3'],['Semua layout buku','f','book']]}
 ];
@@ -945,7 +956,7 @@ function openG(k){var w=W.filter(function(x){return x.k===k})[0];cur=IMG[k];last
 function closeAll(){lb.hidden=true;xd.hidden=true;lock(false);if(last){last.focus();last=null}}
 function openX(x){last=document.activeElement;$('#xtm').textContent=x.time;$('#xt').textContent=x.t+', '+x.co;$('#xs').textContent=x.sub;
  var ul=$('#xl');ul.innerHTML='';x.li.forEach(function(s){ul.appendChild(el('li',null,s))});
- var k=$('#xk');k.innerHTML='';x.acts.forEach(function(a){var b=el('button','lk',a[0]);b.onclick=function(){if(a[1]==='f'){closeAll();openFilter(a[2])}else openG(a[2])};k.appendChild(b)});
+ var k=$('#xk');k.innerHTML='';x.acts.forEach(function(a){var b=el('button','lk',a[0]);b.onclick=function(){if(a[1]==='f'){closeAll();openFilter(a[2])}else if(a[1]==='p'){closeAll();window.openProject(window.PW.filter(function(w){return w.k===a[2]})[0])}else openG(a[2])};k.appendChild(b)});
  xd.hidden=false;lock(true);$('#xx').focus()}
 $('#lbx').onclick=closeAll;$('#xx').onclick=closeAll;$('#lbp').onclick=function(){show(idx-1)};$('#lbn').onclick=function(){show(idx+1)};
 lb.addEventListener('click',function(e){if(e.target===lb)closeAll()});xd.addEventListener('click',function(e){if(e.target===xd)closeAll()});
@@ -1008,7 +1019,7 @@ var pg=$('#pg'),pgb=$('#pgb'),lastF=null,reduce=matchMedia('(prefers-reduced-mot
 var CAT={sosmed:'Media sosial',identity:'Karya kuliah · Identitas visual',info:'Karya kuliah · Infografis',book:'Layout buku',roomi:'Desain grafis & brand'};
 var CL={'prj2026':['Roomi × TANAKA','2026'],'roomi-feed':['Roomi','2024 – 2025'],'roomi-flyer':['Roomi','2024'],'roomi-pack':['Roomi','2024 – 2025'],plangon:['Situs Plangon','2024'],trengginas:['Trengginas Offroad Team','2021'],oz1:['Oz Radio Bandung','2023'],oz2:['Oz Radio Bandung','2023'],oz3:['Oz Radio Bandung','2023'],memo:['Memo Multimedia','2023 – 2024'],intercoder:['interCoder',''],bj:['bahasajerman.id',''],gwk:['Garuda Wisnu Kencana','2021']};
 var E=[
-{t:'Roomi Indonesia',role:'Desainer Grafis & Brand',yr:'2024 – sekarang',cat:'Media sosial · Kemasan · Promosi',cover:'roomi-feed',lg:'roomi',g:'linear-gradient(135deg,#7a4fd0,#e2509a)',keys:['roomi-feed','roomi-flyer','roomi-pack'],d:'Desain media sosial yang selaras dengan identitas brand. Poster, banner digital, dan materi promosi event perusahaan. Kemasan produk serta materi visual untuk toko offline. Aset event seperti backdrop dan flyer.'},
+{t:'Roomi Indonesia',role:'Desainer Grafis & Brand',yr:'2024 – sekarang',cat:'Media sosial · Kemasan · Promosi · Aktivasi event',cover:'roomi-feed',lg:'roomi',g:'linear-gradient(135deg,#7a4fd0,#e2509a)',keys:['prj2026','roomi-feed','roomi-flyer','roomi-pack'],d:'Motion design dan materi visual aktivasi booth ROOMI × TANAKA di Jakarta Fair (PRJ) 2026. Desain media sosial yang selaras dengan identitas brand. Poster, banner digital, dan materi promosi event perusahaan. Kemasan produk serta materi visual untuk toko offline. Aset event seperti backdrop dan flyer.'},
 {t:'Memo Multimedia',role:'Advertising Designer',yr:'2023 – 2024',cat:'Media sosial',cover:'memo',lg:'memo',g:'linear-gradient(135deg,#4a3fa8,#2b6fc0)',keys:['memo','intercoder','bj'],d:'Konten harian media sosial, dari informatif sampai promosi, dengan identitas visual brand yang konsisten di semua platform.'},
 {t:'Oz Radio Bandung',role:'Advertising Designer',yr:'2023',cat:'Layout buku · Proposal',cover:'oz1',lg:'oz',g:'linear-gradient(135deg,#f0b92c,#f4893a)',keys:['oz1','oz2','oz3'],d:'Menyusun tangga lagu mingguan untuk program siaran, proposal kerja sama dengan sponsor, brand, dan event organizer, serta ikut memperbarui company profile Oz Radio.'}
 ];
@@ -1028,7 +1039,7 @@ function openPage(o){lastF=document.activeElement;pgb.innerHTML='';
  var t=mk('h2','pgt',o.t);t.id='pgt';pgb.appendChild(t);
  var m=mk('div','pgm');m.style.gridTemplateColumns=o.cols.length>2?'1fr 1.3fr auto':'1fr auto';
  o.cols.forEach(function(c,i){var d=mk('div','pgc'+(i===o.cols.length-1?' r':''));d.appendChild(mk('small',null,'('+c[0]+')'));d.appendChild(mk('span',null,c[1]));m.appendChild(d)});pgb.appendChild(m);
- if(o.cr){var cr=mk('div','pgcr');o.cr.forEach(function(r){var d=mk('div','pgcrr');d.appendChild(mk('small',null,'('+r[0]+')'));d.appendChild(mk('span',null,r[1]));cr.appendChild(d)});pgb.appendChild(cr)}
+ if(o.cr){o.cr.forEach(function(r){var d=mk('div','pgc cr');d.appendChild(mk('small',null,'('+r[0]+')'));var sp=mk('span',null);r[1].split('|').forEach(function(n,j){if(j)sp.appendChild(mk('em','cm',', '));sp.appendChild(mk('b','nm',n))});d.appendChild(sp);m.appendChild(d)})}
  var from=0,po={imgs:o.imgs,t:o.t};
  if(o.hero!==false){var hi=img(o.imgs[0],o.t);hi.className='pgh1';hi.onclick=function(){viewer(po,0)};pgb.appendChild(hi);from=1}
  pgb.appendChild(mk('p','pgd',o.d));
