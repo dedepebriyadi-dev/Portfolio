@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="dark">
 <title>Dede Pebriyadi – Desainer Grafis &amp; Brand</title>
-<meta name="description" content="Portofolio Dede Pebriyadi, desainer grafis &amp; brand dari Bandung. Identitas visual, media sosial, kemasan produk, dan motion design.">
+<meta name="description" content="Portofolio Dede Pebriyadi, desainer grafis &amp; brand dari Bandung. Identitas visual, media sosial, kemasan produk, dan motion graphics.">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#0a0a0a;--fg:#fff;--dim:#6d6d6d;--line:#222;--pink:#fff;--rose:#c4357f;
@@ -758,6 +758,18 @@ nav:has(.mb:hover) .brand{color:#8a8a8a!important}
  .pgc.cr:nth-last-child(2){grid-column:1!important}
  .pgc.cr:last-child{grid-column:2!important}
 }
+
+/* all-works preview row: several tiles, same hard-cut slideshow */
+.vth{position:static;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(8px,1.2vw,18px);width:100%;aspect-ratio:auto;overflow:visible;background:none;margin:clamp(18px,2.4vw,32px) 0 clamp(24px,3.2vw,44px)}
+.vth .vtt{position:relative;opacity:1;aspect-ratio:16/9;overflow:hidden;background:#111}
+.vth .vtt div{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.1s ease-in-out}
+@media (prefers-reduced-motion:reduce){.vth .vtt div{transition:none}}
+.vth .vtt div.on{opacity:1}
+@media(max-width:900px){.vth{grid-template-columns:repeat(3,minmax(0,1fr))}.vth .vtt:nth-child(n+4){display:none}}
+@media(max-width:520px){.vth{grid-template-columns:repeat(2,minmax(0,1fr))}.vth .vtt:nth-child(n+3){display:none}}
+
+/* about text moved under Halo */
+.sub.subab{font-size:clamp(20px,2.7vw,36px);line-height:1.12;letter-spacing:-.03em;max-width:27em}
 </style>
 </head>
 <body>
@@ -766,7 +778,7 @@ nav:has(.mb:hover) .brand{color:#8a8a8a!important}
 <header class="hero" id="top">
  <h1 class="giant lc" data-cap=".82" aria-label="Halo, saya Pebri"><span aria-hidden="true">Halo.</span></h1>
  <div class="w hi">
-  <p class="sub">Desain visual yang ekspresif, <i>rapi, dan mudah dipahami</i> untuk brand, media sosial, <i>dan kemasan produk.</i></p>
+  <p class="sub subab">Saya Dede Pebriyadi, desainer grafis dari Bandung. <i>Saya berpengalaman lebih dari dua tahun dengan lebih dari 30 proyek kreatif, terutama identitas visual, branding, dan desain kemasan produk.</i></p>
   <div class="cta"><a class="btn" href="#karya">Lihat karya</a><a class="btn o" href="#kontak">Hubungi saya</a></div>
   <div class="tag">Desainer grafis &amp; brand<br>BDG/JKT/IDN</div>
  </div>
@@ -813,13 +825,13 @@ nav:has(.mb:hover) .brand{color:#8a8a8a!important}
 <div class="md" id="xd" role="dialog" aria-modal="true" aria-labelledby="xt" hidden><div class="mc"><div class="mh"><time id="xtm"></time><button class="lk" id="xx">Tutup</button></div><h3 id="xt"></h3><p id="xs"></p><ul id="xl"></ul><div class="lks" id="xk"></div></div></div>
 <div class="mn" id="menu" role="dialog" aria-modal="true" aria-label="Menu navigasi" hidden>
  <div class="mh"><button class="brand hb" aria-label="Kembali ke beranda">Dede Pebriyadi</button><button class="bk" id="menu-x" aria-label="Kembali"><svg viewBox="0 0 512 512" aria-hidden="true"><circle cx="256" cy="256" r="224" stroke-width="34"/><path d="M308 150L209 245Q192 258 209 272L308 364" stroke-width="34" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></button></div>
- <ul class="ml"><li><a href="#top" class="mi" data-s="top"><span style="--i:0">Beranda,</span></a></li><li><a href="#tentang" class="mi" data-s="tentang"><span style="--i:1">Tentang,</span></a></li><li><a href="#pengalaman" class="mi" data-s="pengalaman"><span style="--i:2">Pengalaman,</span></a></li><li><a href="#karya" class="mi" data-s="karya"><span style="--i:3">Karya,</span></a></li><li><a href="#kemampuan" class="mi" data-s="kemampuan"><span style="--i:4">Skills,</span></a></li><li><a href="#kontak" class="mi" data-s="kontak"><span style="--i:5">Kontak</span></a></li></ul>
+ <ul class="ml"><li><a href="#top" class="mi" data-s="top"><span style="--i:0">Beranda,</span></a></li><li><a href="#tentang" class="mi" data-s="tentang"><span style="--i:1">Tentang,</span></a></li><li><a href="#karya" class="mi" data-s="karya"><span style="--i:2">Karya,</span></a></li><li><a href="#kemampuan" class="mi" data-s="kemampuan"><span style="--i:3">Skills,</span></a></li><li><a href="#kontak" class="mi" data-s="kontak"><span style="--i:4">Kontak</span></a></li></ul>
  <p class="mloc"><span class="id27" role="text" aria-label="27 tahun, Bandung, Jakarta, Indonesia"><span class="r1"><b>27</b><b>YO</b></span><b>BDG/JKT/IDN</b></span></p>
 </div>
 <div class="al" id="al" role="dialog" aria-modal="true" aria-label="Semua karya per tahun" hidden>
  <div class="mh"><button class="brand hb" aria-label="Kembali ke beranda">Dede Pebriyadi</button>
   <div class="vm" role="group" aria-label="Tampilan"><button class="vm-b on" data-v="grid">Grid</button> <span class="sl" aria-hidden="true">/</span> <button class="vm-b" data-v="list">Daftar</button> <span class="sl" aria-hidden="true">/</span> <button class="vm-b" data-v="preview">Pratinjau</button></div>
-  <div class="sn"><a href="#top" data-s="top">Beranda</a> <span class="sl" aria-hidden="true">/</span> <a href="#tentang" data-s="tentang">Tentang</a> <span class="sl" aria-hidden="true">/</span> <a href="#pengalaman" data-s="pengalaman">Pengalaman</a> <span class="sl" aria-hidden="true">/</span> <a href="#karya" data-s="karya" class="on">Karya</a> <span class="sl" aria-hidden="true">/</span> <a href="#kemampuan" data-s="kemampuan">Skills</a> <span class="sl" aria-hidden="true">/</span> <a href="#kontak" data-s="kontak">Kontak</a></div>
+  <div class="sn"><a href="#top" data-s="top">Beranda</a> <span class="sl" aria-hidden="true">/</span> <a href="#tentang" data-s="tentang">Tentang</a> <span class="sl" aria-hidden="true">/</span> <a href="#karya" data-s="karya" class="on">Karya</a> <span class="sl" aria-hidden="true">/</span> <a href="#kemampuan" data-s="kemampuan">Skills</a> <span class="sl" aria-hidden="true">/</span> <a href="#kontak" data-s="kontak">Kontak</a></div>
   <div class="mr"><span class="loc"><span class="id27" role="text" aria-label="27 tahun, Bandung, Jakarta, Indonesia"><span class="r1"><b>27</b><b>YO</b></span><b>BDG/JKT/IDN</b></span></span><button class="bk" id="al-x" aria-label="Kembali"><svg viewBox="0 0 512 512" aria-hidden="true"><circle cx="256" cy="256" r="224" stroke-width="34"/><path d="M308 150L209 245Q192 258 209 272L308 364" stroke-width="34" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></button></div>
  </div>
  <div class="yi" id="yi"></div>
@@ -837,7 +849,6 @@ nav:has(.mb:hover) .brand{color:#8a8a8a!important}
  <div class="mh"><button class="bk" id="ab-x" aria-label="Kembali"><svg viewBox="0 0 512 512" aria-hidden="true"><circle cx="256" cy="256" r="224" stroke-width="34"/><path d="M308 150L209 245Q192 258 209 272L308 364" stroke-width="34" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></button></div>
  <div class="abb">
   <div class="abw"><figure class="abp"><img id="ab-img" alt="Potret hitam putih Dede Pebriyadi di studio foto" decoding="async"></figure><h2 class="abt" id="abt" aria-label="Dede Pebriyadi"><span aria-hidden="true">Dd-</span><span aria-hidden="true">PEBRI-</span><span aria-hidden="true">yd</span></h2></div>
-  <div class="abs"><span class="abl">(Tentang)</span><p class="abx big hov">Saya Dede Pebriyadi, desainer grafis dari Bandung. Saya berpengalaman lebih dari dua tahun dengan lebih dari 30 proyek kreatif, terutama identitas visual, branding, dan desain kemasan produk.</p></div>
   <div class="abs"><span class="abl">(Profil)</span><p class="abx hov">Saya lulusan Desain Komunikasi Visual Institut Teknologi Nasional Bandung (2024). Kini saya bekerja sebagai Desainer Grafis &amp; Brand di Roomi Indonesia, membuat desain media sosial, materi promosi, dan kemasan produk. Saya terbiasa bekerja dalam tim kreatif untuk menghadirkan solusi visual yang efektif dan sesuai kebutuhan. Di luar desain, saya menekuni fotografi dan pernah meraih Juara 1 CTR Photo Contest (2016) serta Juara 3 Klise Fotografi UGJ (2017).</p></div>
   <div class="abs"><span class="abl">(Kontak)</span><div class="abk"><a href="https://wa.me/6281944245544">WhatsApp</a><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=dedepebriyadi@gmail.com" target="_blank" rel="noopener">Email</a></div></div>
   <div class="abs"><span class="abl">(Sosial)</span><div class="abk"><a href="https://www.behance.net/Pebriyadi04" target="_blank" rel="noopener">Behance</a><a href="https://www.linkedin.com/in/dede-pebriyadi-536b2b266/" target="_blank" rel="noopener">LinkedIn</a></div></div>
@@ -874,8 +885,8 @@ const TH={"roomi-rollup":"assets/images/th-16.jpg","roomi-tv":"assets/images/th-
 var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return [].slice.call((r||document).querySelectorAll(s))};
 var reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
 var W=[
-{k:'prj2026',c:'roomi',t:'ROOMI ACTIVATION at PRJ 2026',m:'Roomi × TANAKA · 2026',d:'Materi visual aktivasi booth ROOMI × TANAKA di Jakarta Fair 2026 (PRJ): Crazy Sale, Lucky Spin, tantangan UGC di TikTok, hadiah untuk pengunjung, serta promo produk Debellin dan Pentonic.',g:'linear-gradient(135deg,#6aa8f4,#f4a3c8)',x:'#0b2b5b',cr:[['Graphic Design','Arif Nur Fadhila|Dimas Wahyu Mubarak'],['Motion Design','Dede Pebriyadi']],v:'assets/videos/prj2026-activation.mp4',vp:'assets/images/prj2026-video-poster.jpg'},
-{k:'xmas2025',c:'roomi',cat:'Motion design',t:'Roomi Blue Christmas',m:'Roomi · 2025',d:'Motion looping bertema Roomi Blue Christmas / Roomi PR Package (2025): Roomi Advent Calendar “14 Days of Daily Comforts” untuk tampilan layar LED di Lippo Mall Puri.',g:'linear-gradient(135deg,#1c4fb8,#7fb6f0)',x:'#fff',cr:[['Graphic Design','Arif Nur Fadhila'],['Motion Design','Dede Pebriyadi']],v:'assets/videos/xmas2025-blue-christmas.mp4',vp:'assets/images/xmas2025-video-poster.jpg'},
+{k:'prj2026',c:'roomi',t:'ROOMI ACTIVATION at PRJ 2026',m:'Roomi × TANAKA · 2026',d:'Materi visual aktivasi booth ROOMI × TANAKA di Jakarta Fair 2026 (PRJ): Crazy Sale, Lucky Spin, tantangan UGC di TikTok, hadiah untuk pengunjung, serta promo produk Debellin dan Pentonic.',g:'linear-gradient(135deg,#6aa8f4,#f4a3c8)',x:'#0b2b5b',cr:[['Graphic Design','Arif Nur Fadhila|Dimas Wahyu Mubarak'],['Motion Graphics','Dede Pebriyadi']],v:'assets/videos/prj2026-activation.mp4',vp:'assets/images/prj2026-video-poster.jpg'},
+{k:'xmas2025',c:'roomi',cat:'Motion graphics',t:'Roomi Blue Christmas',m:'Roomi · 2025',d:'Motion looping bertema Roomi Blue Christmas / Roomi PR Package (2025): Roomi Advent Calendar “14 Days of Daily Comforts” untuk tampilan layar LED di Lippo Mall Puri.',g:'linear-gradient(135deg,#1c4fb8,#7fb6f0)',x:'#fff',cr:[['Graphic Design','Arif Nur Fadhila'],['Motion Graphics','Dede Pebriyadi']],v:'assets/videos/xmas2025-blue-christmas.mp4',vp:'assets/images/xmas2025-video-poster.jpg'},
 {k:'roomi-tv',c:'roomi',t:'Roomi Display TV on Campaign Store',m:'Roomi · 2025',d:'Materi tampilan layar TV untuk kampanye di toko Roomi: promo Buy 1 Get 1 CCTV SPYE Series, peluncuran Roomi CCTV SPYE Smart A50, dan Extra Mic for Sonic.',g:'linear-gradient(135deg,#e5222c,#5aa6ef)',x:'#fff'},
 {k:'roomi-rollup',c:'roomi',t:'Roomi Roll Up Banner',m:'Roomi · 2025',d:'Roll up banner Roomi untuk koleksi Aero Stand dan speaker, serta Mega Clearance Sale.',g:'linear-gradient(135deg,#dfe8fa,#9fb6e8)',x:'#1b2a35'},
 {k:'roomi-feed',c:'roomi',t:'Roomi Feed & Ads',m:'Roomi · 2024',d:'Feed Instagram, iklan digital, dan banner untuk promo seperti Christmas Gift Sale dan 12.12 Mega Sale.',g:'linear-gradient(135deg,#7a4fd0,#e2509a)',x:'#fff'},
@@ -892,7 +903,7 @@ var W=[
 {k:'bj',c:'sosmed',t:'bahasajerman.id',m:'Media sosial',d:'Konten belajar kosakata transportasi dan cara menyebut jam, mudah dibaca dan disimpan.',g:'linear-gradient(135deg,#2a3c9a,#4a68d8)',x:'#fff'}
 ];
 window.PW=W;var X=[
-{time:'Aug 2024 – sekarang',t:'Desainer Grafis & Brand',co:'Roomi Indonesia',sub:'PT. Sumber Digital Media',li:['Motion design dan materi visual aktivasi booth ROOMI × TANAKA di Jakarta Fair (PRJ) 2026.','Desain media sosial yang selaras dengan identitas brand.','Poster, banner digital, dan materi promosi event perusahaan.','Kemasan produk serta materi visual untuk toko offline.','Aset event seperti backdrop dan flyer.'],g:'linear-gradient(135deg,#7a4fd0,#e2509a)',x:'#fff',acts:[['Buka ROOMI Activation at PRJ 2026','p','prj2026'],['Lihat karya Roomi','f','roomi'],['Buka galeri kemasan','o','roomi-pack']]},
+{time:'Aug 2024 – sekarang',t:'Desainer Grafis & Brand',co:'Roomi Indonesia',sub:'PT. Sumber Digital Media',li:['Motion graphics dan materi visual aktivasi booth ROOMI × TANAKA di Jakarta Fair (PRJ) 2026.','Desain media sosial yang selaras dengan identitas brand.','Poster, banner digital, dan materi promosi event perusahaan.','Kemasan produk serta materi visual untuk toko offline.','Aset event seperti backdrop dan flyer.'],g:'linear-gradient(135deg,#7a4fd0,#e2509a)',x:'#fff',acts:[['Buka ROOMI Activation at PRJ 2026','p','prj2026'],['Lihat karya Roomi','f','roomi'],['Buka galeri kemasan','o','roomi-pack']]},
 {time:'Nov 2023 – Feb 2024',t:'Advertising Designer',co:'Memo Multimedia',sub:'PT. Memo Multimedia Organizer',li:['Konten harian media sosial, dari informatif sampai promosi.','Konsistensi identitas visual di semua platform.'],g:'linear-gradient(135deg,#4a3fa8,#2b6fc0)',x:'#fff',acts:[['Buka galeri Memo','o','memo'],['Semua karya media sosial','f','sosmed']]},
 {time:'Mar 2023 – Jun 2023',t:'Advertising Designer',co:'Oz Radio Bandung',sub:'Proposal kerja sama dan company profile',li:['Menyusun tangga lagu mingguan untuk program siaran.','Proposal untuk sponsor, brand, dan event organizer.','Pembaruan company profile Oz Radio.'],g:'linear-gradient(135deg,#f0b92c,#f4893a)',x:'#2b1700',acts:[['Buka company profile','o','oz3'],['Semua layout buku','f','book']]}
 ];
@@ -1032,7 +1043,7 @@ var pg=$('#pg'),pgb=$('#pgb'),lastF=null,reduce=matchMedia('(prefers-reduced-mot
 var CAT={sosmed:'Media sosial',identity:'Karya kuliah · Identitas visual',info:'Karya kuliah · Infografis',book:'Layout buku',roomi:'Desain grafis & brand'};
 var CL={'prj2026':['Roomi × TANAKA','2026'],'xmas2025':['Roomi','2025'],'roomi-tv':['Roomi','2025'],'roomi-rollup':['Roomi','2025'],'roomi-feed':['Roomi','2024 – 2025'],'roomi-flyer':['Roomi','2024'],'roomi-pack':['Roomi','2024 – 2025'],plangon:['Situs Plangon','2024'],trengginas:['Trengginas Offroad Team','2021'],oz1:['Oz Radio Bandung','2023'],oz2:['Oz Radio Bandung','2023'],oz3:['Oz Radio Bandung','2023'],memo:['Memo Multimedia','2023 – 2024'],intercoder:['interCoder',''],bj:['bahasajerman.id',''],gwk:['Garuda Wisnu Kencana','2021']};
 var E=[
-{t:'Roomi Indonesia',role:'Desainer Grafis & Brand',yr:'2024 – sekarang',cat:'Media sosial · Kemasan · Promosi · Aktivasi event · Motion design',cover:'roomi-feed',lg:'roomi',g:'linear-gradient(135deg,#7a4fd0,#e2509a)',keys:['prj2026','xmas2025','roomi-tv','roomi-rollup','roomi-feed','roomi-flyer','roomi-pack'],d:'Motion design dan materi visual aktivasi booth ROOMI × TANAKA di Jakarta Fair (PRJ) 2026, serta video motion looping Roomi Blue Christmas / Roomi PR Package (2025). Desain media sosial yang selaras dengan identitas brand, poster, banner digital, dan materi promosi event perusahaan. Materi tampilan layar TV untuk kampanye di toko, kemasan produk, serta materi visual untuk toko offline. Aset event seperti backdrop, flyer, dan roll up banner.'},
+{t:'Roomi Indonesia',role:'Desainer Grafis & Brand',yr:'2024 – sekarang',cat:'Media sosial · Kemasan · Promosi · Aktivasi event · Motion graphics',cover:'roomi-feed',lg:'roomi',g:'linear-gradient(135deg,#7a4fd0,#e2509a)',keys:['prj2026','xmas2025','roomi-tv','roomi-rollup','roomi-feed','roomi-flyer','roomi-pack'],d:'Motion graphics dan materi visual aktivasi booth ROOMI × TANAKA di Jakarta Fair (PRJ) 2026, serta video motion looping Roomi Blue Christmas / Roomi PR Package (2025). Desain media sosial yang selaras dengan identitas brand, poster, banner digital, dan materi promosi event perusahaan. Materi tampilan layar TV untuk kampanye di toko, kemasan produk, serta materi visual untuk toko offline. Aset event seperti backdrop, flyer, dan roll up banner.'},
 {t:'Memo Multimedia',role:'Advertising Designer',yr:'2023 – 2024',cat:'Media sosial',cover:'memo',lg:'memo',g:'linear-gradient(135deg,#4a3fa8,#2b6fc0)',keys:['memo','intercoder','bj'],d:'Konten harian media sosial, dari informatif sampai promosi, dengan identitas visual brand yang konsisten di semua platform.'},
 {t:'Oz Radio Bandung',role:'Advertising Designer',yr:'2023',cat:'Layout buku · Proposal',cover:'oz1',lg:'oz',g:'linear-gradient(135deg,#f0b92c,#f4893a)',keys:['oz1','oz2','oz3'],d:'Menyusun tangga lagu mingguan untuk program siaran, proposal kerja sama dengan sponsor, brand, dan event organizer, serta ikut memperbarui company profile Oz Radio.'}
 ];
@@ -1102,9 +1113,9 @@ $('#va-n').textContent=W.length;
 var shs=[].slice.call(document.querySelectorAll('.sh'));
 if('IntersectionObserver' in window&&!reduce){var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.35});shs.forEach(function(s){io.observe(s)})}else shs.forEach(function(s){s.classList.add('in')});
 // thumbnail slideshow next to the button
-var vth=$('#vth'),keys=['roomi-feed','oz1','trengginas','memo'],vi=0;
-keys.forEach(function(k,i){vth.appendChild(mk('div','k-'+k+(i?'':' on')))});
-if(!reduce)setInterval(function(){var l=vth.children;l[vi].classList.remove('on');vi=(vi+1)%l.length;l[vi].classList.add('on')},2400);
+var vth=$('#vth'),vk=W.map(function(w){return w.k}),VT=5,vtl=[];
+for(var vn=0;vn<VT;vn++){(function(n){var st=(n*3)%vk.length,t=mk('div','vtt');vk.forEach(function(k,j){t.appendChild(mk('div','k-'+k+(j===st?' on':'')))});vth.appendChild(t);vtl.push({el:t,i:st,n:n})})(vn)}
+if(!reduce)vtl.forEach(function(t){setTimeout(function(){setInterval(function(){var l=t.el.children;l[t.i].classList.remove('on');t.i=(t.i+1)%l.length;l[t.i].classList.add('on')},3200)},t.n*640)});
 // all projects page
 var al=$('#al'),alb=$('#alb'),yn=$('#yn'),yi=$('#yi'),alp=$('#alp'),lastF=null,groups=[],vmode='grid';
 var years=[];W.forEach(function(w){var y=YR[w.k]||0;if(years.indexOf(y)<0)years.push(y)});years.sort(function(a,b){return (b||-1)-(a||-1)});
