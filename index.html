@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="dark">
-<title>Dede Pebriyadi – Desainer Grafis &amp; Brand</title>
-<meta name="description" content="Portofolio Dede Pebriyadi, desainer grafis &amp; brand dari Bandung. Identitas visual, media sosial, kemasan produk, dan motion graphics.">
+<title>Dede Pebriyadi – Graphic &amp; Brand Designer</title>
+<meta name="description" content="Portfolio of Dede Pebriyadi, a graphic &amp; brand designer from Bandung. Visual identity, social media, product packaging, and motion graphics.">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#0a0a0a;--fg:#fff;--dim:#6d6d6d;--line:#222;--pink:#fff;--rose:#c4357f;
@@ -770,21 +770,63 @@ nav:has(.mb:hover) .brand{color:#8a8a8a!important}
 
 /* about text moved under Halo */
 .sub.subab{font-size:clamp(20px,2.7vw,36px);line-height:1.12;letter-spacing:-.03em;max-width:27em}
+
+/* resume-style experience */
+.cv{display:grid!important;grid-template-columns:minmax(0,.85fr) minmax(0,1.35fr);column-gap:clamp(28px,5vw,72px);row-gap:clamp(48px,7vw,88px);align-items:start;padding-top:clamp(24px,5vw,64px)}
+.cvc{display:flex;flex-direction:column;gap:clamp(40px,5.5vw,64px)}
+.cvx{border-left:1px solid #222;padding-left:clamp(22px,4vw,56px)}
+.cvh{margin:0 0 clamp(18px,2.4vw,30px);font-size:clamp(28px,3vw,44px);font-weight:600;letter-spacing:-.045em;line-height:1;color:#fff}
+.cvrow{display:grid;grid-template-columns:clamp(72px,8.5vw,120px) minmax(0,1fr);column-gap:clamp(22px,3vw,40px);margin-bottom:clamp(22px,3vw,36px);font-size:clamp(14px,1.15vw,17px);line-height:1.4}
+.cvd{color:#8a8a8a;font-variant-numeric:tabular-nums}
+.cvb{position:relative;color:#fff}
+.cvb::before{content:"";position:absolute;left:calc(clamp(22px,3vw,40px)/-2 - 3px);top:.55em;width:6px;height:6px;border-radius:50%;background:#8a8a8a}
+.cvb>b{display:block;font-weight:700;text-transform:uppercase;letter-spacing:-.01em;margin-bottom:4px}
+.cvb p{margin:0 0 6px}.cvb p b{font-weight:700}
+.cvb ul{margin:0 0 12px;padding-left:1.1em}.cvb li{margin:0 0 5px}
+.cvsk{display:grid;grid-template-columns:1fr 1fr;gap:14px 24px;font-size:clamp(14px,1.15vw,17px);color:#fff}
+.cvsw{display:flex;gap:clamp(12px,1.6vw,20px)}
+.cvsw img{width:clamp(44px,4.4vw,60px);height:auto;display:block}
+.cva{grid-column:1/-1}
+.cvag{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px clamp(20px,4vw,56px);text-align:center}
+.cvai{display:flex;flex-direction:column;align-items:center;gap:8px;font-size:clamp(14px,1.15vw,17px)}
+.cvdot{width:6px;height:6px;border-radius:50%;background:#8a8a8a;display:block}
+.cvai b{text-transform:uppercase;font-weight:700;letter-spacing:-.01em}
+.cvo{color:#8a8a8a}
+.cvgo{font:inherit;font-size:14px;font-weight:500;color:#fff;background:none;border:1px solid #fff;border-radius:999px;padding:8px 16px;cursor:pointer;transition:background .35s var(--ez),color .35s var(--ez)}
+.cvgo:hover,.cvgo:focus-visible{background:#fff;color:#000}
+@media(max-width:800px){.cv{grid-template-columns:minmax(0,1fr)}.cvx{border-left:0;padding-left:0}.cvag{grid-template-columns:minmax(0,1fr)}.cvb::before{left:-14px}}
+
+/* spacing around the CV section */
+#pengalaman{padding-top:clamp(72px,10vw,150px)!important;padding-bottom:clamp(80px,11vw,160px)}
+.cv{padding-top:0!important}
+
+.cvgo2{margin-top:12px}
+
+
+/* Karya Kuliah overlay holds the moving cards and arrows unchanged */
+.pg.kk{z-index:65;transition:opacity .3s,visibility 0s linear .3s!important}
+.pg.kk.open{transition:opacity .3s!important}
+.pg.kk:not(.open){visibility:hidden;pointer-events:none}
+#kk #kkw{padding-left:0;padding-right:0}
+
+/* nav: no blurred block behind the header text */
+nav{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;background:none!important;box-shadow:none!important}
+nav::before,nav::after{display:none!important}
+/* mobile order: Education, Experience, Skills, Software, Achievements */
+@media(max-width:800px){.cvc{display:contents}.cvs-ed{order:1}.cvs-ex{order:2}.cvs-sk{order:3}.cvs-sw{order:4}.cvs-ac{order:5}}
 </style>
 </head>
 <body>
 <nav><a href="#top" class="brand">Dede Pebriyadi</a><button class="mb" id="menu-btn" aria-haspopup="dialog" aria-expanded="false" aria-controls="menu">Menu</button></nav>
 
 <header class="hero" id="top">
- <h1 class="giant lc" data-cap=".82" aria-label="Halo, saya Pebri"><span aria-hidden="true">Halo.</span></h1>
+ <h1 class="giant lc" data-cap=".82" aria-label="Hello, I’m Pebri"><span aria-hidden="true">Hello.</span></h1>
  <div class="w hi">
-  <p class="sub subab">Saya Dede Pebriyadi, desainer grafis dari Bandung. <i>Saya berpengalaman lebih dari dua tahun dengan lebih dari 30 proyek kreatif, terutama identitas visual, branding, dan desain kemasan produk.</i></p>
-  <div class="cta"><a class="btn" href="#karya">Lihat karya</a><a class="btn o" href="#kontak">Hubungi saya</a></div>
-  <div class="tag">Desainer grafis &amp; brand<br>BDG/JKT/IDN</div>
+  <p class="sub subab">I’m Dede Pebriyadi, a graphic designer from Bandung. <i>I have more than two years of experience across 30+ creative projects, especially visual identity, branding, and packaging design.</i></p>
+  <div class="cta"><a class="btn" href="#karya">View work</a><a class="btn o" href="#kontak">Contact me</a></div>
+  <div class="tag">Graphic &amp; brand designer<br>BDG/JKT/IDN</div>
  </div>
 </header>
-
-<div class="mq" aria-hidden="true"><div>Roomi<span>/</span>Situs Plangon<span>/</span>Trengginas<span>/</span>Oz Radio<span>/</span>Memo<span>/</span>interCoder<span>/</span>bahasajerman.id<span>/</span>Roomi<span>/</span>Situs Plangon<span>/</span>Trengginas<span>/</span>Oz Radio<span>/</span>Memo<span>/</span>interCoder<span>/</span>bahasajerman.id<span>/</span></div></div>
 
 <p class="fill" id="fill" hidden></p>
 
@@ -793,75 +835,74 @@ nav:has(.mb:hover) .brand{color:#8a8a8a!important}
 </section>
 
 <section class="w" id="karya" style="padding-top:0">
- <div class="trk" id="wtrk" aria-label="Karya pilihan, bergerak otomatis. Klik untuk membuka galeri."></div>
- <div class="ft"><div class="arr"><button class="ar" data-t="w" data-d="-1" aria-label="Geser karya ke kiri">&#8249;</button><button class="ar" data-t="w" data-d="1" aria-label="Geser karya ke kanan">&#8250;</button></div></div>
-
  <div class="va">
-  <button class="vab" id="va-btn" aria-haspopup="dialog"><span class="vat"><span class="roll" data-t="Semua Karya"></span></span><span class="van" id="va-n" aria-hidden="true"></span></button>
+  <button class="vab" id="va-btn" aria-haspopup="dialog"><span class="vat"><span class="roll" data-t="All Work"></span></span><span class="van" id="va-n" aria-hidden="true"></span></button>
   <div class="vth" id="vth" aria-hidden="true"></div>
  </div>
 </section>
 
-<section class="w" id="kemampuan" style="padding-top:0">
- <div class="sh"><h2 class="sht"><span>Skills</span></h2><span class="shn" aria-hidden="true">08</span></div>
- <p class="sk skl"><span class="sg">Graphic Design&nbsp;/</span> <span class="sg">Motion Graphics&nbsp;/</span> <span class="sg">Packaging Design&nbsp;/</span> <span class="sg">Photography&nbsp;/</span> <span class="sg">Adobe Photoshop&nbsp;/</span> <span class="sg">Adobe After Effects&nbsp;/</span> <span class="sg">Adobe Illustrator&nbsp;/</span> <span class="sg">Design Thinking</span></p>
- <div class="sh aws"><h2 class="sht"><span>Penghargaan</span></h2><span class="shn" aria-hidden="true">02</span></div>
- <div class="aw"><div><b>Juara 3</b><small>Klise Fotografi UGJ · Jan 2017</small></div><div><b>Juara 1</b><small>CTR Photo Contest · Jan 2016</small></div></div>
-</section>
-
 <footer class="foot" id="kontak">
  <div class="w">
-  <p class="cl"><span class="cw">Lagi ada proyek seru?</span> <i>Sini ngobrol santai dulu,</i> <span class="cw">siapa tahu cocok kerja bareng.</span></p>
+  <p class="cl"><span class="cw">Got an exciting project?</span> <i>Let’s have a casual chat first,</i> <span class="cw">and see if we’re a good fit to work together.</span></p>
   <div class="fgrid"><div class="fr">
-   <div class="fg"><span class="fh">(Kontak)</span><a class="fk" href="https://wa.me/6281944245544">WhatsApp</a><a class="fk" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=dedepebriyadi@gmail.com" target="_blank" rel="noopener">Email</a></div>
-   <div class="fg"><span class="fh">(Sosial)</span><a class="fk" href="https://www.behance.net/Pebriyadi04" target="_blank" rel="noopener">Behance</a><a class="fk" href="https://www.linkedin.com/in/dede-pebriyadi-536b2b266/" target="_blank" rel="noopener">LinkedIn</a></div>
+   <div class="fg"><span class="fh">(Contact)</span><a class="fk" href="https://wa.me/6281944245544">WhatsApp</a><a class="fk" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=dedepebriyadi@gmail.com" target="_blank" rel="noopener">Email</a></div>
+   <div class="fg"><span class="fh">(Social)</span><a class="fk" href="https://www.behance.net/Pebriyadi04" target="_blank" rel="noopener">Behance</a><a class="fk" href="https://www.linkedin.com/in/dede-pebriyadi-536b2b266/" target="_blank" rel="noopener">LinkedIn</a></div>
   </div></div>
-  <div class="fbot"><div class="floc">BDG/JKT/IDN<br>Desainer grafis &amp; brand</div><div class="fcp">© 2027,<br>Semua hak dilindungi</div></div>
+  <div class="fbot"><div class="floc">BDG/JKT/IDN<br>Graphic &amp; brand designer</div><div class="fcp">© 2027,<br>All rights reserved</div></div>
   
  </div>
  <div class="giant" aria-hidden="true"><span>PEBRI</span></div>
 </footer>
 
-<div class="md" id="xd" role="dialog" aria-modal="true" aria-labelledby="xt" hidden><div class="mc"><div class="mh"><time id="xtm"></time><button class="lk" id="xx">Tutup</button></div><h3 id="xt"></h3><p id="xs"></p><ul id="xl"></ul><div class="lks" id="xk"></div></div></div>
-<div class="mn" id="menu" role="dialog" aria-modal="true" aria-label="Menu navigasi" hidden>
- <div class="mh"><button class="brand hb" aria-label="Kembali ke beranda">Dede Pebriyadi</button><button class="bk" id="menu-x" aria-label="Kembali"><svg viewBox="0 0 512 512" aria-hidden="true"><circle cx="256" cy="256" r="224" stroke-width="34"/><path d="M308 150L209 245Q192 258 209 272L308 364" stroke-width="34" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></button></div>
- <ul class="ml"><li><a href="#top" class="mi" data-s="top"><span style="--i:0">Beranda,</span></a></li><li><a href="#tentang" class="mi" data-s="tentang"><span style="--i:1">Tentang,</span></a></li><li><a href="#karya" class="mi" data-s="karya"><span style="--i:2">Karya,</span></a></li><li><a href="#kemampuan" class="mi" data-s="kemampuan"><span style="--i:3">Skills,</span></a></li><li><a href="#kontak" class="mi" data-s="kontak"><span style="--i:4">Kontak</span></a></li></ul>
- <p class="mloc"><span class="id27" role="text" aria-label="27 tahun, Bandung, Jakarta, Indonesia"><span class="r1"><b>27</b><b>YO</b></span><b>BDG/JKT/IDN</b></span></p>
+<div class="md" id="xd" role="dialog" aria-modal="true" aria-labelledby="xt" hidden><div class="mc"><div class="mh"><time id="xtm"></time><button class="lk" id="xx">Close</button></div><h3 id="xt"></h3><p id="xs"></p><ul id="xl"></ul><div class="lks" id="xk"></div></div></div>
+<div class="mn" id="menu" role="dialog" aria-modal="true" aria-label="Navigation menu" hidden>
+ <div class="mh"><button class="brand hb" aria-label="Back to home">Dede Pebriyadi</button><button class="bk" id="menu-x" aria-label="Back"><svg viewBox="0 0 512 512" aria-hidden="true"><circle cx="256" cy="256" r="224" stroke-width="34"/><path d="M308 150L209 245Q192 258 209 272L308 364" stroke-width="34" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></button></div>
+ <ul class="ml"><li><a href="#top" class="mi" data-s="top"><span style="--i:0">Home,</span></a></li><li><a href="#tentang" class="mi" data-s="tentang"><span style="--i:1">About,</span></a></li><li><a href="#karya" class="mi" data-s="karya"><span style="--i:2">Work,</span></a></li><li><a href="#kontak" class="mi" data-s="kontak"><span style="--i:3">Contact</span></a></li></ul>
+ <p class="mloc"><span class="id27" role="text" aria-label="27 years old, Bandung, Jakarta, Indonesia"><span class="r1"><b>27</b><b>YO</b></span><b>BDG/JKT/IDN</b></span></p>
 </div>
-<div class="al" id="al" role="dialog" aria-modal="true" aria-label="Semua karya per tahun" hidden>
- <div class="mh"><button class="brand hb" aria-label="Kembali ke beranda">Dede Pebriyadi</button>
-  <div class="vm" role="group" aria-label="Tampilan"><button class="vm-b on" data-v="grid">Grid</button> <span class="sl" aria-hidden="true">/</span> <button class="vm-b" data-v="list">Daftar</button> <span class="sl" aria-hidden="true">/</span> <button class="vm-b" data-v="preview">Pratinjau</button></div>
-  <div class="sn"><a href="#top" data-s="top">Beranda</a> <span class="sl" aria-hidden="true">/</span> <a href="#tentang" data-s="tentang">Tentang</a> <span class="sl" aria-hidden="true">/</span> <a href="#karya" data-s="karya" class="on">Karya</a> <span class="sl" aria-hidden="true">/</span> <a href="#kemampuan" data-s="kemampuan">Skills</a> <span class="sl" aria-hidden="true">/</span> <a href="#kontak" data-s="kontak">Kontak</a></div>
-  <div class="mr"><span class="loc"><span class="id27" role="text" aria-label="27 tahun, Bandung, Jakarta, Indonesia"><span class="r1"><b>27</b><b>YO</b></span><b>BDG/JKT/IDN</b></span></span><button class="bk" id="al-x" aria-label="Kembali"><svg viewBox="0 0 512 512" aria-hidden="true"><circle cx="256" cy="256" r="224" stroke-width="34"/><path d="M308 150L209 245Q192 258 209 272L308 364" stroke-width="34" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></button></div>
+<div class="al" id="al" role="dialog" aria-modal="true" aria-label="All work by year" hidden>
+ <div class="mh"><button class="brand hb" aria-label="Back to home">Dede Pebriyadi</button>
+  <div class="vm" role="group" aria-label="View"><button class="vm-b on" data-v="grid">Grid</button> <span class="sl" aria-hidden="true">/</span> <button class="vm-b" data-v="list">List</button> <span class="sl" aria-hidden="true">/</span> <button class="vm-b" data-v="preview">Preview</button></div>
+  <div class="sn"><a href="#top" data-s="top">Home</a> <span class="sl" aria-hidden="true">/</span> <a href="#tentang" data-s="tentang">About</a> <span class="sl" aria-hidden="true">/</span> <a href="#karya" data-s="karya" class="on">Work</a> <span class="sl" aria-hidden="true">/</span> <a href="#kontak" data-s="kontak">Contact</a></div>
+  <div class="mr"><span class="loc"><span class="id27" role="text" aria-label="27 years old, Bandung, Jakarta, Indonesia"><span class="r1"><b>27</b><b>YO</b></span><b>BDG/JKT/IDN</b></span></span><button class="bk" id="al-x" aria-label="Back"><svg viewBox="0 0 512 512" aria-hidden="true"><circle cx="256" cy="256" r="224" stroke-width="34"/><path d="M308 150L209 245Q192 258 209 272L308 364" stroke-width="34" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></button></div>
  </div>
  <div class="yi" id="yi"></div>
  <div class="alp" id="alp" aria-hidden="true"></div>
  <div class="alpi" id="alpi" aria-hidden="true"><span class="pn"></span><h3 class="pt"></h3><p class="pm"></p><p class="pd"></p></div>
- <button class="ax" id="ax" aria-label="Kembali ke atas"><svg viewBox="0 0 512 512" width="30" height="30" fill="currentColor" stroke="currentColor" stroke-width="44" stroke-linejoin="round" aria-hidden="true"><path d="M256 140L480 385H32Z"/></svg></button>
+ <button class="ax" id="ax" aria-label="Back to top"><svg viewBox="0 0 512 512" width="30" height="30" fill="currentColor" stroke="currentColor" stroke-width="44" stroke-linejoin="round" aria-hidden="true"><path d="M256 140L480 385H32Z"/></svg></button>
  <div class="alb" id="alb" data-v="grid"></div>
  <div class="yn" id="yn"></div>
 </div>
-<div class="vw" id="vw" role="dialog" aria-modal="true" aria-label="Gambar layar penuh" hidden>
- <div class="vwh"><span class="vwc" id="vwc"></span><button class="bk" id="vw-x" aria-label="Tutup gambar"><svg viewBox="0 0 512 512" aria-hidden="true"><circle cx="256" cy="256" r="224" stroke-width="34"/><path d="M308 150L209 245Q192 258 209 272L308 364" stroke-width="34" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></button></div>
- <div class="vws"><button class="vwb vwl" id="vw-p" aria-label="Gambar sebelumnya">&#8249;</button><img id="vwi" alt=""><button class="vwb vwr" id="vw-n" aria-label="Gambar berikutnya">&#8250;</button></div>
+<div class="vw" id="vw" role="dialog" aria-modal="true" aria-label="Full-screen image" hidden>
+ <div class="vwh"><span class="vwc" id="vwc"></span><button class="bk" id="vw-x" aria-label="Close image"><svg viewBox="0 0 512 512" aria-hidden="true"><circle cx="256" cy="256" r="224" stroke-width="34"/><path d="M308 150L209 245Q192 258 209 272L308 364" stroke-width="34" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></button></div>
+ <div class="vws"><button class="vwb vwl" id="vw-p" aria-label="Previous image">&#8249;</button><img id="vwi" alt=""><button class="vwb vwr" id="vw-n" aria-label="Next image">&#8250;</button></div>
 </div>
 <div class="ab" id="ab" role="dialog" aria-modal="true" aria-labelledby="abt" hidden>
- <div class="mh"><button class="bk" id="ab-x" aria-label="Kembali"><svg viewBox="0 0 512 512" aria-hidden="true"><circle cx="256" cy="256" r="224" stroke-width="34"/><path d="M308 150L209 245Q192 258 209 272L308 364" stroke-width="34" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></button></div>
+ <div class="mh"><button class="bk" id="ab-x" aria-label="Back"><svg viewBox="0 0 512 512" aria-hidden="true"><circle cx="256" cy="256" r="224" stroke-width="34"/><path d="M308 150L209 245Q192 258 209 272L308 364" stroke-width="34" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></button></div>
  <div class="abb">
-  <div class="abw"><figure class="abp"><img id="ab-img" alt="Potret hitam putih Dede Pebriyadi di studio foto" decoding="async"></figure><h2 class="abt" id="abt" aria-label="Dede Pebriyadi"><span aria-hidden="true">Dd-</span><span aria-hidden="true">PEBRI-</span><span aria-hidden="true">yd</span></h2></div>
-  <div class="abs"><span class="abl">(Profil)</span><p class="abx hov">Saya lulusan Desain Komunikasi Visual Institut Teknologi Nasional Bandung (2024). Kini saya bekerja sebagai Desainer Grafis &amp; Brand di Roomi Indonesia, membuat desain media sosial, materi promosi, dan kemasan produk. Saya terbiasa bekerja dalam tim kreatif untuk menghadirkan solusi visual yang efektif dan sesuai kebutuhan. Di luar desain, saya menekuni fotografi dan pernah meraih Juara 1 CTR Photo Contest (2016) serta Juara 3 Klise Fotografi UGJ (2017).</p></div>
-  <div class="abs"><span class="abl">(Kontak)</span><div class="abk"><a href="https://wa.me/6281944245544">WhatsApp</a><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=dedepebriyadi@gmail.com" target="_blank" rel="noopener">Email</a></div></div>
-  <div class="abs"><span class="abl">(Sosial)</span><div class="abk"><a href="https://www.behance.net/Pebriyadi04" target="_blank" rel="noopener">Behance</a><a href="https://www.linkedin.com/in/dede-pebriyadi-536b2b266/" target="_blank" rel="noopener">LinkedIn</a></div></div>
-  <div class="abs"><span class="abl">(Lokasi)</span><div class="abk"><span>BDG/JKT/IDN</span></div></div>
+  <div class="abw"><figure class="abp"><img id="ab-img" alt="Black-and-white portrait of Dede Pebriyadi in a photo studio" decoding="async"></figure><h2 class="abt" id="abt" aria-label="Dede Pebriyadi"><span aria-hidden="true">Dd-</span><span aria-hidden="true">PEBRI-</span><span aria-hidden="true">yd</span></h2></div>
+  <div class="abs"><span class="abl">(Profile)</span><p class="abx hov">I graduated in Visual Communication Design from Institut Teknologi Nasional Bandung (2024). I currently work as a Graphic &amp; Brand Designer at Roomi Indonesia, creating social media designs, promotional materials, and product packaging. I’m used to working in creative teams to deliver effective visual solutions that fit the brief. Outside of design, I’m passionate about photography, and I won 1st Place at the CTR Photo Contest (2016) and 3rd Place at Klise Fotografi UGJ (2017).</p></div>
+  <div class="abs"><span class="abl">(Contact)</span><div class="abk"><a href="https://wa.me/6281944245544">WhatsApp</a><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=dedepebriyadi@gmail.com" target="_blank" rel="noopener">Email</a></div></div>
+  <div class="abs"><span class="abl">(Social)</span><div class="abk"><a href="https://www.behance.net/Pebriyadi04" target="_blank" rel="noopener">Behance</a><a href="https://www.linkedin.com/in/dede-pebriyadi-536b2b266/" target="_blank" rel="noopener">LinkedIn</a></div></div>
+  <div class="abs"><span class="abl">(Location)</span><div class="abk"><span>BDG/JKT/IDN</span></div></div>
  </div>
 </div>
 <div class="pg" id="pg" role="dialog" aria-modal="true" aria-labelledby="pgt" hidden>
- <div class="mh"><button class="brand hb" aria-label="Kembali ke beranda">Dede Pebriyadi</button><button class="bk" id="pg-x" aria-label="Kembali"><svg viewBox="0 0 512 512" aria-hidden="true"><circle cx="256" cy="256" r="224" stroke-width="34"/><path d="M308 150L209 245Q192 258 209 272L308 364" stroke-width="34" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></button></div>
+ <div class="mh"><button class="brand hb" aria-label="Back to home">Dede Pebriyadi</button><button class="bk" id="pg-x" aria-label="Back"><svg viewBox="0 0 512 512" aria-hidden="true"><circle cx="256" cy="256" r="224" stroke-width="34"/><path d="M308 150L209 245Q192 258 209 272L308 364" stroke-width="34" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></button></div>
  <div class="pgb" id="pgb"></div>
 </div>
-<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Galeri karya" hidden>
- <div class="lbh"><div><b id="lbt"></b><span id="lbd"></span></div><button class="lk" id="lbx">Tutup</button></div>
- <div class="lbs"><button class="nv" id="lbp" aria-label="Gambar sebelumnya">&#8249;</button><img id="lbi" alt=""><button class="nv" id="lbn" aria-label="Gambar berikutnya">&#8250;</button></div>
+<div class="pg kk" id="kk" role="dialog" aria-modal="true" aria-labelledby="kkt">
+ <div class="mh"><button class="brand hb" id="kk-home" aria-label="Back to home">Dede Pebriyadi</button><button class="bk" id="kk-x" aria-label="Back"><svg viewBox="0 0 512 512" aria-hidden="true"><circle cx="256" cy="256" r="224" stroke-width="34"/><path d="M308 150L209 245Q192 258 209 272L308 364" stroke-width="34" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></button></div>
+ <div class="pgb"><h2 class="pgt" id="kkt">University Work</h2>
+<section class="w" id="kkw" style="padding-top:0">
+ <div class="trk" id="wtrk" aria-label="Selected work, moving automatically. Click to open the gallery."></div>
+ <div class="ft"><div class="arr"><button class="ar" data-t="w" data-d="-1" aria-label="Scroll work left">&#8249;</button><button class="ar" data-t="w" data-d="1" aria-label="Scroll work right">&#8250;</button></div></div>
+</section>
+ </div>
+</div>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Work gallery" hidden>
+ <div class="lbh"><div><b id="lbt"></b><span id="lbd"></span></div><button class="lk" id="lbx">Close</button></div>
+ <div class="lbs"><button class="nv" id="lbp" aria-label="Previous image">&#8249;</button><img id="lbi" alt=""><button class="nv" id="lbn" aria-label="Next image">&#8250;</button></div>
  <div class="lbf"><span id="lbc"></span><div id="lbth"></div></div>
 </div>
 
@@ -885,35 +926,35 @@ const TH={"roomi-rollup":"assets/images/th-16.jpg","roomi-tv":"assets/images/th-
 var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return [].slice.call((r||document).querySelectorAll(s))};
 var reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
 var W=[
-{k:'prj2026',c:'roomi',t:'ROOMI ACTIVATION at PRJ 2026',m:'Roomi × TANAKA · 2026',d:'Materi visual aktivasi booth ROOMI × TANAKA di Jakarta Fair 2026 (PRJ): Crazy Sale, Lucky Spin, tantangan UGC di TikTok, hadiah untuk pengunjung, serta promo produk Debellin dan Pentonic.',g:'linear-gradient(135deg,#6aa8f4,#f4a3c8)',x:'#0b2b5b',cr:[['Graphic Design','Arif Nur Fadhila|Dimas Wahyu Mubarak'],['Motion Graphics','Dede Pebriyadi']],v:'assets/videos/prj2026-activation.mp4',vp:'assets/images/prj2026-video-poster.jpg'},
-{k:'xmas2025',c:'roomi',cat:'Motion graphics',t:'Roomi Blue Christmas',m:'Roomi · 2025',d:'Motion looping bertema Roomi Blue Christmas / Roomi PR Package (2025): Roomi Advent Calendar “14 Days of Daily Comforts” untuk tampilan layar LED di Lippo Mall Puri.',g:'linear-gradient(135deg,#1c4fb8,#7fb6f0)',x:'#fff',cr:[['Graphic Design','Arif Nur Fadhila'],['Motion Graphics','Dede Pebriyadi']],v:'assets/videos/xmas2025-blue-christmas.mp4',vp:'assets/images/xmas2025-video-poster.jpg'},
-{k:'roomi-tv',c:'roomi',t:'Roomi Display TV on Campaign Store',m:'Roomi · 2025',d:'Materi tampilan layar TV untuk kampanye di toko Roomi: promo Buy 1 Get 1 CCTV SPYE Series, peluncuran Roomi CCTV SPYE Smart A50, dan Extra Mic for Sonic.',g:'linear-gradient(135deg,#e5222c,#5aa6ef)',x:'#fff'},
-{k:'roomi-rollup',c:'roomi',t:'Roomi Roll Up Banner',m:'Roomi · 2025',d:'Roll up banner Roomi untuk koleksi Aero Stand dan speaker, serta Mega Clearance Sale.',g:'linear-gradient(135deg,#dfe8fa,#9fb6e8)',x:'#1b2a35'},
-{k:'roomi-feed',c:'roomi',t:'Roomi Feed & Ads',m:'Roomi · 2024',d:'Feed Instagram, iklan digital, dan banner untuk promo seperti Christmas Gift Sale dan 12.12 Mega Sale.',g:'linear-gradient(135deg,#7a4fd0,#e2509a)',x:'#fff'},
-{k:'roomi-flyer',c:'roomi',t:'Roomi Flyer',m:'Roomi · 2024',d:'Flyer lipat dan materi pembukaan toko Roomi di Lippo Mall Puri.',g:'linear-gradient(135deg,#aab3c4,#f0e2d2)',x:'#1b2a35'},
-{k:'roomi-pack',c:'roomi',t:'Roomi Packaging',m:'Roomi · 2024–2025',d:'Dieline dan artwork kemasan Opus, Aero Dry, power bank Ion Slim dan Ion Pro, serta Aero Stand Pro.',g:'linear-gradient(135deg,#e6d2b8,#b98f62)',x:'#2a1d10'},
-{k:'plangon',c:'identity',t:'Situs Plangon',m:'Karya kuliah · Identitas visual',d:'Logo, tipografi Angelia dan Poppins, serta sistem papan petunjuk lengkap dengan dimensi, warna, dan material produksi.',g:'linear-gradient(135deg,#e8a92f,#f6d27a)',x:'#2b1d00'},
-{k:'trengginas',c:'identity',t:'Trengginas Offroad',m:'Karya kuliah · Identitas visual',d:'Brand manual berisi brandmark, variasi warna, ruang kosong, ukuran minimum, dan penggunaan strapline.',g:'linear-gradient(135deg,#3f4a22,#9a8630)',x:'#fff'},
-{k:'gwk',c:'info',t:'Garuda Wisnu Kencana',m:'Karya kuliah · Infografis',d:'Infografis dan materi visual tentang Garuda Wisnu Kencana: legenda, material, teknologi pembuatan, linimasa pembangunan, serta area dan jadwal acara di GWK Culture Park.',g:'linear-gradient(135deg,#d4a443,#7a8f5a)',x:'#1b1608'},
-{k:'oz1',c:'book',t:'Music and Matters',m:'Layout buku · Oz Radio',d:'Buku horizontal untuk program musik dan kegiatan langsung, dengan palet biru dan kuning yang ceria.',g:'linear-gradient(135deg,#2fb4e8,#f6d04a)',x:'#0b2b3b'},
-{k:'oz2',c:'book',t:'Oz Discoland',m:'Layout buku · Oz Radio',d:'Proposal acara DJ performance dengan gradasi ungu dan oranye serta detail konten dan target venue.',g:'linear-gradient(135deg,#9b4fb0,#f4b43c)',x:'#fff'},
-{k:'oz3',c:'book',t:'Company Profile',m:'Layout buku · Oz Radio',d:'Frekuensi, area siaran, profil pendengar, dan tim penyiar dengan ilustrasi bergaya retro.',g:'linear-gradient(135deg,#f0b92c,#f4893a)',x:'#2b1700'},
-{k:'memo',c:'sosmed',t:'Memo',m:'Media sosial',d:'Carousel Instagram tentang perbedaan mesin kasir dan sistem Point of Sales.',g:'linear-gradient(135deg,#4a3fa8,#2b6fc0)',x:'#fff'},
-{k:'intercoder',c:'sosmed',t:'interCoder',m:'Media sosial',d:'Seri konten tren teknologi POS: cloud, integrasi e-commerce, dan sistem ramah lingkungan.',g:'linear-gradient(135deg,#6a3fa0,#9a6ad0)',x:'#fff'},
-{k:'bj',c:'sosmed',t:'bahasajerman.id',m:'Media sosial',d:'Konten belajar kosakata transportasi dan cara menyebut jam, mudah dibaca dan disimpan.',g:'linear-gradient(135deg,#2a3c9a,#4a68d8)',x:'#fff'}
+{k:'prj2026',c:'roomi',t:'ROOMI Activation at PRJ 2026',m:'Roomi × TANAKA · 2026',d:'Visual materials for the ROOMI × TANAKA booth activation at Jakarta Fair 2026 (PRJ): Crazy Sale, Lucky Spin, a TikTok UGC challenge, prizes for visitors, and Debellin and Pentonic product promotions.',g:'linear-gradient(135deg,#6aa8f4,#f4a3c8)',x:'#0b2b5b',cr:[['Graphic Design','Arif Nur Fadhila|Dimas Wahyu Mubarak'],['Motion Graphics','Dede Pebriyadi']],v:'assets/videos/prj2026-activation.mp4',vp:'assets/images/prj2026-video-poster.jpg'},
+{k:'xmas2025',c:'roomi',cat:'Motion graphics',t:'Roomi Blue Christmas',m:'Roomi · 2025',d:'A looping motion piece themed Roomi Blue Christmas / Roomi PR Package (2025): the Roomi Advent Calendar “14 Days of Daily Comforts” for an LED display at Lippo Mall Puri.',g:'linear-gradient(135deg,#1c4fb8,#7fb6f0)',x:'#fff',cr:[['Graphic Design','Arif Nur Fadhila'],['Motion Graphics','Dede Pebriyadi']],v:'assets/videos/xmas2025-blue-christmas.mp4',vp:'assets/images/xmas2025-video-poster.jpg'},
+{k:'roomi-tv',c:'roomi',t:'Roomi In-Store TV Display Campaign',m:'Roomi · 2025',d:'TV display materials for in-store Roomi campaigns: the Buy 1 Get 1 CCTV SPYE Series promo, the Roomi CCTV SPYE Smart A50 launch, and Extra Mic for Sonic.',g:'linear-gradient(135deg,#e5222c,#5aa6ef)',x:'#fff'},
+{k:'roomi-rollup',c:'roomi',t:'Roomi Roll-Up Banner',m:'Roomi · 2025',d:'Roomi roll-up banners for the Aero Stand and speaker collections, and the Mega Clearance Sale.',g:'linear-gradient(135deg,#dfe8fa,#9fb6e8)',x:'#1b2a35'},
+{k:'roomi-feed',c:'roomi',t:'Roomi Feed & Ads',m:'Roomi · 2024',d:'Instagram feed posts, digital ads, and banners for promotions such as the Christmas Gift Sale and the 12.12 Mega Sale.',g:'linear-gradient(135deg,#7a4fd0,#e2509a)',x:'#fff'},
+{k:'roomi-flyer',c:'roomi',t:'Roomi Flyer',m:'Roomi · 2024',d:'Folded flyers and opening materials for the Roomi store at Lippo Mall Puri.',g:'linear-gradient(135deg,#aab3c4,#f0e2d2)',x:'#1b2a35'},
+{k:'roomi-pack',c:'roomi',t:'Roomi Packaging',m:'Roomi · 2024–2025',d:'Dielines and packaging artwork for Opus, Aero Dry, the Ion Slim and Ion Pro power banks, and Aero Stand Pro.',g:'linear-gradient(135deg,#e6d2b8,#b98f62)',x:'#2a1d10'},
+{k:'plangon',c:'identity',t:'Plangon Heritage Site',m:'University work · Visual identity',d:'Logo, Angelia and Poppins typography, and a complete signage system with dimensions, colors, and production materials.',g:'linear-gradient(135deg,#e8a92f,#f6d27a)',x:'#2b1d00'},
+{k:'trengginas',c:'identity',t:'Trengginas Offroad',m:'University work · Visual identity',d:'A brand manual covering the brandmark, color variations, clear space, minimum size, and strapline usage.',g:'linear-gradient(135deg,#3f4a22,#9a8630)',x:'#fff'},
+{k:'gwk',c:'info',t:'Garuda Wisnu Kencana',m:'University work · Infographics',d:'Infographics and visual materials about Garuda Wisnu Kencana: its legend, materials, construction technology, building timeline, and event areas and schedule at GWK Culture Park.',g:'linear-gradient(135deg,#d4a443,#7a8f5a)',x:'#1b1608'},
+{k:'oz1',c:'book',t:'Music and Matters',m:'Book layout · Oz Radio',d:'A landscape book for music programs and live events, with a cheerful blue and yellow palette.',g:'linear-gradient(135deg,#2fb4e8,#f6d04a)',x:'#0b2b3b'},
+{k:'oz2',c:'book',t:'Oz Discoland',m:'Book layout · Oz Radio',d:'An event proposal for a DJ performance, with purple and orange gradients and details on content and target venues.',g:'linear-gradient(135deg,#9b4fb0,#f4b43c)',x:'#fff'},
+{k:'oz3',c:'book',t:'Company Profile',m:'Book layout · Oz Radio',d:'Frequency, broadcast area, listener profile, and the on-air team, with retro-style illustrations.',g:'linear-gradient(135deg,#f0b92c,#f4893a)',x:'#2b1700'},
+{k:'memo',c:'sosmed',t:'Memo',m:'Social media',d:'An Instagram carousel on the difference between cash registers and Point of Sales systems.',g:'linear-gradient(135deg,#4a3fa8,#2b6fc0)',x:'#fff'},
+{k:'intercoder',c:'sosmed',t:'interCoder',m:'Social media',d:'A content series on POS technology trends: cloud, e-commerce integration, and eco-friendly systems.',g:'linear-gradient(135deg,#6a3fa0,#9a6ad0)',x:'#fff'},
+{k:'bj',c:'sosmed',t:'bahasajerman.id',m:'Social media',d:'Learning content on transportation vocabulary and telling the time in German, easy to read and save.',g:'linear-gradient(135deg,#2a3c9a,#4a68d8)',x:'#fff'}
 ];
 window.PW=W;var X=[
-{time:'Aug 2024 – sekarang',t:'Desainer Grafis & Brand',co:'Roomi Indonesia',sub:'PT. Sumber Digital Media',li:['Motion graphics dan materi visual aktivasi booth ROOMI × TANAKA di Jakarta Fair (PRJ) 2026.','Desain media sosial yang selaras dengan identitas brand.','Poster, banner digital, dan materi promosi event perusahaan.','Kemasan produk serta materi visual untuk toko offline.','Aset event seperti backdrop dan flyer.'],g:'linear-gradient(135deg,#7a4fd0,#e2509a)',x:'#fff',acts:[['Buka ROOMI Activation at PRJ 2026','p','prj2026'],['Lihat karya Roomi','f','roomi'],['Buka galeri kemasan','o','roomi-pack']]},
-{time:'Nov 2023 – Feb 2024',t:'Advertising Designer',co:'Memo Multimedia',sub:'PT. Memo Multimedia Organizer',li:['Konten harian media sosial, dari informatif sampai promosi.','Konsistensi identitas visual di semua platform.'],g:'linear-gradient(135deg,#4a3fa8,#2b6fc0)',x:'#fff',acts:[['Buka galeri Memo','o','memo'],['Semua karya media sosial','f','sosmed']]},
-{time:'Mar 2023 – Jun 2023',t:'Advertising Designer',co:'Oz Radio Bandung',sub:'Proposal kerja sama dan company profile',li:['Menyusun tangga lagu mingguan untuk program siaran.','Proposal untuk sponsor, brand, dan event organizer.','Pembaruan company profile Oz Radio.'],g:'linear-gradient(135deg,#f0b92c,#f4893a)',x:'#2b1700',acts:[['Buka company profile','o','oz3'],['Semua layout buku','f','book']]}
+{time:'Aug 2024 – present',t:'Graphic & Brand Designer',co:'Roomi Indonesia',sub:'PT. Sumber Digital Media',li:['Motion graphics and visual materials for the ROOMI × TANAKA booth activation at Jakarta Fair (PRJ) 2026.','Social media designs aligned with the brand identity.','Posters, digital banners, and promotional materials for company events.','Product packaging and visual materials for offline stores.','Event assets such as backdrops and flyers.'],g:'linear-gradient(135deg,#7a4fd0,#e2509a)',x:'#fff',acts:[['Open ROOMI Activation at PRJ 2026','p','prj2026'],['View Roomi work','f','roomi'],['Open packaging gallery','o','roomi-pack']]},
+{time:'Nov 2023 – Feb 2024',t:'Advertising Designer',co:'Memo Multimedia',sub:'PT. Memo Multimedia Organizer',li:['Daily social media content, from informative to promotional.','Consistent visual identity across all platforms.'],g:'linear-gradient(135deg,#4a3fa8,#2b6fc0)',x:'#fff',acts:[['Open Memo gallery','o','memo'],['All social media work','f','sosmed']]},
+{time:'Mar 2023 – Jun 2023',t:'Advertising Designer',co:'Oz Radio Bandung',sub:'Partnership proposals and company profile',li:['Compiled weekly music charts for broadcast programs.','Proposals for sponsors, brands, and event organizers.','Updating the Oz Radio company profile.'],g:'linear-gradient(135deg,#f0b92c,#f4893a)',x:'#2b1700',acts:[['Open company profile','o','oz3'],['All book layouts','f','book']]}
 ];
 function el(tag,cls,txt){var e=document.createElement(tag);if(cls)e.className=cls;if(txt!=null)e.textContent=txt;return e}
 // one shared stylesheet for cover images (no per-card copies of the image data)
 var st=document.createElement('style');st.textContent=Object.keys(IMG).map(function(k){return '.k-'+k+'{background-image:url("'+TH[k]+'")}'}).join('\n');document.head.appendChild(st);
-function wBuild(w){var c=el('article','c wk');c.dataset.c=w.c;c.dataset.k=w.k;c.style.setProperty('--g',w.g);c.style.setProperty('--x',w.x);c.setAttribute('aria-label','Buka galeri '+w.t);
- var tx=el('div','tx');tx.appendChild(el('h3',null,w.t));tx.appendChild(el('span','mt',w.m+' · '+(IMG[w.k].length?IMG[w.k].length+' gambar':'video motion')));tx.appendChild(el('p',null,w.d));c.appendChild(el('div','im k-'+w.k));c.appendChild(tx);c.onclick=function(){if(window.openProject)window.openProject(w);else openG(w.k)};return c}
-function xBuild(x){var c=el('article','c xc');c.style.setProperty('--g',x.g);c.style.setProperty('--x',x.x);c.setAttribute('aria-label','Detail pengalaman '+x.co);
- var top=el('div');top.appendChild(el('time',null,x.time));top.appendChild(el('h3',null,x.t));top.appendChild(el('span','mt',x.co));top.appendChild(el('p',null,x.li[0]));c.appendChild(top);c.appendChild(el('span','go','Lihat detail'));c.onclick=function(){openX(x)};return c}
+function wBuild(w){var c=el('article','c wk');c.dataset.c=w.c;c.dataset.k=w.k;c.style.setProperty('--g',w.g);c.style.setProperty('--x',w.x);c.setAttribute('aria-label','Open gallery '+w.t);
+ var tx=el('div','tx');tx.appendChild(el('h3',null,w.t));tx.appendChild(el('span','mt',w.m+' · '+(IMG[w.k].length?IMG[w.k].length+(IMG[w.k].length===1?' image':' images'):'motion video')));tx.appendChild(el('p',null,w.d));c.appendChild(el('div','im k-'+w.k));c.appendChild(tx);c.onclick=function(){if(window.openProject)window.openProject(w);else openG(w.k)};return c}
+function xBuild(x){var c=el('article','c xc');c.style.setProperty('--g',x.g);c.style.setProperty('--x',x.x);c.setAttribute('aria-label','Experience details '+x.co);
+ var top=el('div');top.appendChild(el('time',null,x.time));top.appendChild(el('h3',null,x.t));top.appendChild(el('span','mt',x.co));top.appendChild(el('p',null,x.li[0]));c.appendChild(top);c.appendChild(el('span','go','View details'));c.onclick=function(){openX(x)};return c}
 document.addEventListener('keydown',function(e){var c=e.target.closest&&e.target.closest('.c');if(c&&(e.key==='Enter'||e.key===' ')){e.preventDefault();c.click()}});
 /* Endless horizontal track, transform based.
    One rail holds the card set repeated a few times. We move it with translate3d and keep the
@@ -974,7 +1015,7 @@ var lb=$('#lb'),xd=$('#xd'),li=$('#lbi'),cur=[],idx=0,last=null;
 function lock(o){document.body.style.overflow=o?'hidden':''}
 function show(i){idx=(i+cur.length)%cur.length;li.src=cur[idx];$('#lbc').textContent=(idx+1)+' / '+cur.length;$$('#lbth img').forEach(function(t,j){t.classList.toggle('on',j===idx)});$('#lbp').style.visibility=$('#lbn').style.visibility=cur.length>1?'visible':'hidden';$('#lbth').style.display=cur.length>1?'flex':'none'}
 function openG(k){var w=W.filter(function(x){return x.k===k})[0];cur=IMG[k];last=last||document.activeElement;
- $('#lbt').textContent=w.t;$('#lbd').textContent=w.d;li.alt='Karya '+w.t;
+ $('#lbt').textContent=w.t;$('#lbd').textContent=w.d;li.alt='Work '+w.t;
  $('#lbth').innerHTML='';cur.forEach(function(s,j){var t=new Image();t.src=s;t.alt='Gambar '+(j+1);t.onclick=function(){show(j)};$('#lbth').appendChild(t)});
  xd.hidden=true;lb.hidden=false;lock(true);show(0);$('#lbx').focus()}
 function closeAll(){lb.hidden=true;xd.hidden=true;lock(false);if(last){last.focus();last=null}}
@@ -1018,7 +1059,7 @@ document.addEventListener('touchstart',light,{passive:true});document.addEventLi
 <script>
 (function(){
 var btn=document.getElementById('menu-btn'),mn=document.getElementById('menu'),cl=document.getElementById('menu-x'),items=[].slice.call(mn.querySelectorAll('.mi')),lastF=null,reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
-var ids=['top','tentang','pengalaman','karya','kemampuan','kontak'];
+var ids=['top','tentang','pengalaman','karya','kontak'];
 function current(){var c='top';ids.forEach(function(id){var e=document.getElementById(id);if(e&&e.getBoundingClientRect().top<=innerHeight*.4)c=id});return c}
 function open(){lastF=document.activeElement;var c=current();items.forEach(function(a){a.setAttribute('aria-current',a.dataset.s===c?'true':'false')});
  mn.hidden=false;document.body.style.overflow='hidden';btn.setAttribute('aria-expanded','true');
@@ -1040,12 +1081,12 @@ addEventListener('keydown',function(e){if(mn.hidden)return;
 (function(){
 var $=function(s){return document.querySelector(s)};
 var pg=$('#pg'),pgb=$('#pgb'),lastF=null,reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
-var CAT={sosmed:'Media sosial',identity:'Karya kuliah · Identitas visual',info:'Karya kuliah · Infografis',book:'Layout buku',roomi:'Desain grafis & brand'};
-var CL={'prj2026':['Roomi × TANAKA','2026'],'xmas2025':['Roomi','2025'],'roomi-tv':['Roomi','2025'],'roomi-rollup':['Roomi','2025'],'roomi-feed':['Roomi','2024 – 2025'],'roomi-flyer':['Roomi','2024'],'roomi-pack':['Roomi','2024 – 2025'],plangon:['Situs Plangon','2024'],trengginas:['Trengginas Offroad Team','2021'],oz1:['Oz Radio Bandung','2023'],oz2:['Oz Radio Bandung','2023'],oz3:['Oz Radio Bandung','2023'],memo:['Memo Multimedia','2023 – 2024'],intercoder:['interCoder',''],bj:['bahasajerman.id',''],gwk:['Garuda Wisnu Kencana','2021']};
+var CAT={sosmed:'Social media',identity:'University work · Visual identity',info:'University work · Infographics',book:'Book layout',roomi:'Graphic & brand design'};
+var CL={'prj2026':['Roomi × TANAKA','2026'],'xmas2025':['Roomi','2025'],'roomi-tv':['Roomi','2025'],'roomi-rollup':['Roomi','2025'],'roomi-feed':['Roomi','2024 – 2025'],'roomi-flyer':['Roomi','2024'],'roomi-pack':['Roomi','2024 – 2025'],plangon:['Plangon Heritage Site','2024'],trengginas:['Trengginas Offroad Team','2021'],oz1:['Oz Radio Bandung','2023'],oz2:['Oz Radio Bandung','2023'],oz3:['Oz Radio Bandung','2023'],memo:['Memo Multimedia','2023 – 2024'],intercoder:['interCoder',''],bj:['bahasajerman.id',''],gwk:['Garuda Wisnu Kencana','2021']};
 var E=[
-{t:'Roomi Indonesia',role:'Desainer Grafis & Brand',yr:'2024 – sekarang',cat:'Media sosial · Kemasan · Promosi · Aktivasi event · Motion graphics',cover:'roomi-feed',lg:'roomi',g:'linear-gradient(135deg,#7a4fd0,#e2509a)',keys:['prj2026','xmas2025','roomi-tv','roomi-rollup','roomi-feed','roomi-flyer','roomi-pack'],d:'Motion graphics dan materi visual aktivasi booth ROOMI × TANAKA di Jakarta Fair (PRJ) 2026, serta video motion looping Roomi Blue Christmas / Roomi PR Package (2025). Desain media sosial yang selaras dengan identitas brand, poster, banner digital, dan materi promosi event perusahaan. Materi tampilan layar TV untuk kampanye di toko, kemasan produk, serta materi visual untuk toko offline. Aset event seperti backdrop, flyer, dan roll up banner.'},
-{t:'Memo Multimedia',role:'Advertising Designer',yr:'2023 – 2024',cat:'Media sosial',cover:'memo',lg:'memo',g:'linear-gradient(135deg,#4a3fa8,#2b6fc0)',keys:['memo','intercoder','bj'],d:'Konten harian media sosial, dari informatif sampai promosi, dengan identitas visual brand yang konsisten di semua platform.'},
-{t:'Oz Radio Bandung',role:'Advertising Designer',yr:'2023',cat:'Layout buku · Proposal',cover:'oz1',lg:'oz',g:'linear-gradient(135deg,#f0b92c,#f4893a)',keys:['oz1','oz2','oz3'],d:'Menyusun tangga lagu mingguan untuk program siaran, proposal kerja sama dengan sponsor, brand, dan event organizer, serta ikut memperbarui company profile Oz Radio.'}
+{t:'Roomi Indonesia',role:'Graphic & Brand Designer',yr:'2024 – present',cat:'Social media · Packaging · Promotion · Event activation · Motion graphics',cover:'roomi-feed',lg:'roomi',g:'linear-gradient(135deg,#7a4fd0,#e2509a)',keys:['prj2026','xmas2025','roomi-tv','roomi-rollup','roomi-feed','roomi-flyer','roomi-pack'],d:'Motion graphics and visual materials for the ROOMI × TANAKA booth activation at Jakarta Fair (PRJ) 2026, plus the looping motion video Roomi Blue Christmas / Roomi PR Package (2025). Social media designs aligned with the brand identity, posters, digital banners, and promotional materials for company events. TV display materials for in-store campaigns, product packaging, and visual materials for offline stores. Event assets such as backdrops, flyers, and roll-up banners.'},
+{t:'Memo Multimedia',role:'Advertising Designer',yr:'2023 – 2024',cat:'Social media',cover:'memo',lg:'memo',g:'linear-gradient(135deg,#4a3fa8,#2b6fc0)',keys:['memo','intercoder','bj'],d:'Daily social media content, from informative to promotional, with a consistent brand visual identity across all platforms.'},
+{t:'Oz Radio Bandung',role:'Advertising Designer',yr:'2023',cat:'Book layout · Proposals',cover:'oz1',lg:'oz',g:'linear-gradient(135deg,#f0b92c,#f4893a)',keys:['oz1','oz2','oz3'],d:'Compiled weekly music charts for broadcast programs, wrote partnership proposals for sponsors, brands, and event organizers, and helped update the Oz Radio company profile.'}
 ];
 function mk(tag,cls,txt){var e=document.createElement(tag);if(cls)e.className=cls;if(txt!=null)e.textContent=txt;return e}
 function img(src,alt,lazy){var i=new Image();i.src=src;i.alt=alt;i.decoding='async';if(lazy)i.loading='lazy';return i}
@@ -1068,7 +1109,7 @@ function openPage(o){lastF=document.activeElement;pgb.innerHTML='';
  if(o.hero!==false){var hi=img(o.imgs[0],o.t);hi.className='pgh1';hi.onclick=function(){viewer(po,0)};pgb.appendChild(hi);from=1}
  pgb.appendChild(mk('p','pgd',o.d));
  if(o.imgs.length>from){var s=mk('div','pgs');if(o.g)s.style.setProperty('--g',o.g);
-  for(var i=from;i<o.imgs.length;i++){(function(i){var c=mk('div','gi'),b=mk('button','gb');b.setAttribute('aria-label',o.t+' gambar '+(i+1));
+  for(var i=from;i<o.imgs.length;i++){(function(i){var c=mk('div','gi'),b=mk('button','gb');b.setAttribute('aria-label',o.t+' image '+(i+1));
    b.appendChild(img((o.thumbs&&o.thumbs[i])||o.imgs[i],o.t+' '+(i+1),true));b.onclick=function(){viewer(po,i)};c.appendChild(b);var nn=i-from+1;c.appendChild(mk('span','gn',(nn<10?'0':'')+nn));s.appendChild(c)})(i)}
   pgb.appendChild(s)}
  var vl=o.videos||(o.video?[o.video]:[]);
@@ -1077,7 +1118,7 @@ function openPage(o){lastF=document.activeElement;pgb.innerHTML='';
   if(reduce)vd.controls=true;
   else if('IntersectionObserver' in window){var vio=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){var pr=vd.play();if(pr&&pr.catch)pr.catch(function(){})}else vd.pause()})},{root:pg,threshold:.25});vio.observe(vd)}
   else vd.autoplay=true})
- var e=mk('div','pgend');var b=mk('button','mb','Kembali ke daftar');b.id='pg-back';b.onclick=closePage;e.appendChild(b);pgb.appendChild(e);
+ var e=mk('div','pgend');var b=mk('button','mb','Back to list');b.id='pg-back';b.onclick=closePage;e.appendChild(b);pgb.appendChild(e);
  pg.hidden=false;pg.scrollTop=0;document.body.style.overflow='hidden';
  requestAnimationFrame(function(){requestAnimationFrame(function(){pg.classList.add('open')})});$('#pg-x').focus({preventScroll:true});
  if(window._pgio){window._pgio.disconnect();window._pgio=null}
@@ -1087,16 +1128,29 @@ function openPage(o){lastF=document.activeElement;pgb.innerHTML='';
 function closePage(){if(!$('#vw').hidden)vclose();pg.classList.remove('open');setTimeout(function(){pg.hidden=true;pgb.innerHTML='';if(document.getElementById('al').hidden)document.body.style.overflow='';if(lastF)lastF.focus({preventScroll:true})},reduce?0:300)}
 $('#pg-x').onclick=closePage;
 addEventListener('keydown',function(e){if(pg.hidden||!$('#vw').hidden)return;if(e.key==='Escape')closePage();else if(e.key==='Tab'){var f=[$('#pg-x'),$('#pg-back')].filter(Boolean),i=f.indexOf(document.activeElement);e.preventDefault();f[(i+(e.shiftKey?-1:1)+f.length)%f.length].focus()}});
-window.openProject=function(w){var c=CL[w.k]||['',''],cols=[['Klien',c[0]],['Kategori',(w.cat||CAT[w.c])||'']];if(c[1])cols.push(['Tahun',c[1]]);openPage({t:w.t,cols:cols,cr:w.cr,video:w.v?{src:w.v,poster:w.vp}:null,imgs:IMG[w.k],thumbs:(window.GT&&GT[w.k])||null,hero:!(w.k==='plangon'||w.k==='gwk'||w.k==='roomi-rollup'||!IMG[w.k].length),d:w.d,g:w.g})};
-var xl=$('#xlist');
-E.forEach(function(e){var a=mk('div','xi');a.tabIndex=0;a.setAttribute('role','button');a.setAttribute('aria-label','Buka karya '+e.t);a.style.setProperty('--g',e.g);
- var cv=mk('div','xim');var L=LOGO[e.lg];cv.style.backgroundImage='url("'+L.src+'")';cv.style.backgroundColor=L.bg;cv.style.backgroundSize=L.sz;cv.style.backgroundRepeat='no-repeat';cv.style.backgroundPosition='center';a.appendChild(cv);
- var r1=mk('div','xr');r1.appendChild(mk('span',null,e.t));r1.appendChild(mk('span',null,e.yr));
- var r2=mk('div','xr s');r2.appendChild(mk('span',null,e.role));r2.appendChild(mk('span',null,e.cat));
- a.appendChild(r1);a.appendChild(r2);
- function go(){openPage({t:e.t,cols:[['Perusahaan',e.t],['Peran',e.role],['Tahun',e.yr]],imgs:[].concat.apply([],e.keys.map(function(k){return IMG[k]})),videos:[].concat.apply([],e.keys.map(function(k){var w=(window.PW||[]).filter(function(x){return x.k===k})[0];return w&&w.v?[{src:w.v,poster:w.vp,label:'Motion · '+w.t}]:[]})),d:e.d})}
- a.addEventListener('click',go);a.addEventListener('keydown',function(ev){if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();go()}});
- xl.appendChild(a)});
+window.openProject=function(w){var c=CL[w.k]||['',''],cols=[['Client',c[0]],['Category',(w.cat||CAT[w.c])||'']];if(c[1])cols.push(['Year',c[1]]);openPage({t:w.t,cols:cols,cr:w.cr,video:w.v?{src:w.v,poster:w.vp}:null,imgs:IMG[w.k],thumbs:(window.GT&&GT[w.k])||null,hero:!(w.k==='plangon'||w.k==='gwk'||w.k==='roomi-rollup'||!IMG[w.k].length),d:w.d,g:w.g})};
+var xl=$('#xlist');xl.className='cv';
+function cvs(t,c){var d=mk('div','cvs'+(c?' '+c:''));d.appendChild(mk('h3','cvh',t));return d}
+function cvrow(date,head,lines){var r=mk('div','cvrow');r.appendChild(mk('span','cvd',date));var b=mk('div','cvb');b.appendChild(mk('b',null,head));(lines||[]).forEach(function(l){b.appendChild(l)});r.appendChild(b);return r}
+var cl1=mk('div','cvc'),cr1=mk('div','cvc cvx'),ca=mk('div','cva');
+var ed=cvs('Education','cvs-ed');var eb=mk('button','cvgo cvgo2','View university work \u203a');eb.type='button';eb.setAttribute('aria-label','Open university work');
+eb.addEventListener('click',function(){if(window.openKK)window.openKK()});
+ed.appendChild(cvrow('2024','Institut Teknologi Nasional Bandung',[mk('span',null,'Visual Communication Design'),mk('br'),eb]));cl1.appendChild(ed);
+var sk=cvs('Skills','cvs-sk'),sg=mk('div','cvsk');['Graphic Design','Motion Graphics','Packaging Design','Photography','Design Thinking'].forEach(function(t){sg.appendChild(mk('span',null,t))});sk.appendChild(sg);cl1.appendChild(sk);
+var sw=cvs('Software','cvs-sw'),sl=mk('div','cvsw');[['Adobe Illustrator','ai'],['Adobe Photoshop','ps'],['Adobe After Effects','ae']].forEach(function(x){var im=document.createElement('img');im.src='assets/icons/'+x[1]+'.png';im.alt=x[0];im.title=x[0];im.width=96;im.height=96;im.decoding='async';sl.appendChild(im)});sw.appendChild(sl);cl1.appendChild(sw);
+var ex=cvs('Experience','cvs-ex');
+E.forEach(function(e){
+ var p1=mk('p');p1.appendChild(mk('b',null,'Role: '));p1.appendChild(document.createTextNode(e.role));
+ var p2=mk('p');p2.appendChild(mk('b',null,'Description:'));
+ var ul=mk('ul');e.d.replace(/\.$/,'').split(/\.\s+/).forEach(function(t){ul.appendChild(mk('li',null,t+'.'))});
+ var gb=mk('button','cvgo','View work \u203a');gb.type='button';gb.setAttribute('aria-label','Open work '+e.t);
+ function go(){openPage({t:e.t,cols:[['Company',e.t],['Role',e.role],['Year',e.yr]],imgs:[].concat.apply([],e.keys.map(function(k){return IMG[k]})),videos:[].concat.apply([],e.keys.map(function(k){var w=(window.PW||[]).filter(function(x){return x.k===k})[0];return w&&w.v?[{src:w.v,poster:w.vp,label:'Motion \u00b7 '+w.t}]:[]})),d:e.d})}
+ gb.addEventListener('click',go);
+ ex.appendChild(cvrow(e.yr,e.t,[p1,p2,ul,gb]));
+});
+cr1.appendChild(ex);
+var ac=cvs('Awards','cvs-ac');[['Jan 2016','1st Place | Photography','CTR Photo Contest'],['Jan 2017','3rd Place | Photography','Klise Fotografi UGJ']].forEach(function(x){ac.appendChild(cvrow(x[0],x[1],[mk('span',null,x[2])]))});cl1.appendChild(ac);
+xl.appendChild(cl1);xl.appendChild(cr1);
 })();
 </script>
 <script>
@@ -1119,11 +1173,11 @@ if(!reduce)vtl.forEach(function(t){setTimeout(function(){setInterval(function(){
 // all projects page
 var al=$('#al'),alb=$('#alb'),yn=$('#yn'),yi=$('#yi'),alp=$('#alp'),lastF=null,groups=[],vmode='grid';
 var years=[];W.forEach(function(w){var y=YR[w.k]||0;if(years.indexOf(y)<0)years.push(y)});years.sort(function(a,b){return (b||-1)-(a||-1)});
-function lab(y){return y?'\u2018'+String(y).slice(2):'Lainnya'}
-var CATL={sosmed:'Media sosial',identity:'Karya kuliah',info:'Karya kuliah',book:'Layout buku',roomi:'Roomi'};var n=0;
+function lab(y){return y?'\u2018'+String(y).slice(2):'Other'}
+var CATL={sosmed:'Social media',identity:'University work',info:'University work',book:'Book layout',roomi:'Roomi'};var n=0;
 years.forEach(function(y){var sec=mk('section','ys');sec.id='y'+y;var hh=mk('h2','yh',lab(y));sec.appendChild(hh);var g=mk('div','yg');
  W.filter(function(w){return (YR[w.k]||0)===y}).forEach(function(w){n++;
-  var a=mk('div','ai');a.tabIndex=0;a.setAttribute('role','button');a.setAttribute('aria-label','Buka '+w.t);a.style.setProperty('--g',w.g);
+  var a=mk('div','ai');a.tabIndex=0;a.setAttribute('role','button');a.setAttribute('aria-label','Open '+w.t);a.style.setProperty('--g',w.g);
   a.appendChild(mk('div','ait k-'+w.k));var r=mk('div','ain');r.appendChild(mk('span',null,NUM(n)));r.appendChild(mk('span',null,w.t));r.appendChild(mk('span','aic',CATL[w.c]||''));r.appendChild(mk('span','aiy',lab(y)));a.appendChild(r);a._w=w;w._n=NUM(n);w._y=y;a.addEventListener('pointerenter',function(){prev(w)});a.addEventListener('focus',function(){prev(w)});
   a.addEventListener('click',function(){window.openProject(w)});a.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();window.openProject(w)}});g.appendChild(a)});
  sec.appendChild(g);alb.appendChild(sec);groups.push([y,sec]);
@@ -1135,7 +1189,7 @@ function openAll(){lastF=document.activeElement;al.hidden=false;al.scrollTop=0;d
  requestAnimationFrame(function(){requestAnimationFrame(function(){al.classList.add('open')})});$('#al-x').focus({preventScroll:true})}
 function closeAll(){al.classList.remove('open');setTimeout(function(){al.hidden=true;document.body.style.overflow='';if(lastF)lastF.focus({preventScroll:true})},reduce?0:300)}
 $('#va-btn').addEventListener('click',openAll);$('#al-x').addEventListener('click',closeAll);
-var CLN={'prj2026':'Roomi × TANAKA','xmas2025':'Roomi','roomi-tv':'Roomi','roomi-rollup':'Roomi','roomi-feed':'Roomi','roomi-flyer':'Roomi','roomi-pack':'Roomi',plangon:'Situs Plangon',trengginas:'Trengginas Offroad Team',oz1:'Oz Radio Bandung',oz2:'Oz Radio Bandung',oz3:'Oz Radio Bandung',memo:'Memo Multimedia',intercoder:'interCoder',bj:'bahasajerman.id',gwk:'Garuda Wisnu Kencana'};
+var CLN={'prj2026':'Roomi × TANAKA','xmas2025':'Roomi','roomi-tv':'Roomi','roomi-rollup':'Roomi','roomi-feed':'Roomi','roomi-flyer':'Roomi','roomi-pack':'Roomi',plangon:'Plangon Heritage Site',trengginas:'Trengginas Offroad Team',oz1:'Oz Radio Bandung',oz2:'Oz Radio Bandung',oz3:'Oz Radio Bandung',memo:'Memo Multimedia',intercoder:'interCoder',bj:'bahasajerman.id',gwk:'Garuda Wisnu Kencana'};
 function prev(w){if(vmode==='grid')return;alp.className='alp show k-'+w.k;alp.style.setProperty('--g',w.g);if(!reduce&&alp.animate)alp.animate([{opacity:.2,transform:'scale(1.03)'},{opacity:1,transform:'none'}],{duration:520,easing:'cubic-bezier(.2,.8,.2,1)'});var i=$('#alpi');if(!i)return;if(!reduce&&i.animate)i.animate([{opacity:0,transform:'translateY(10px)'},{opacity:1,transform:'none'}],{duration:520,easing:'cubic-bezier(.2,.8,.2,1)'});
  i.querySelector('.pn').textContent=w._n||'';i.querySelector('.pt').textContent=w.t;i.querySelector('.pm').textContent=[CLN[w.k],CATL[w.c],lab(w._y||0)].filter(Boolean).join(' \u00b7 ');i.querySelector('.pd').textContent=w.d||''}
 function flipStart(){if(reduce||!Element.prototype.animate)return null;return [].slice.call(alb.querySelectorAll('.ai')).map(function(a){return {a:a,r:a.getBoundingClientRect()}})}
@@ -1188,7 +1242,7 @@ addEventListener('keydown',function(e){if(al.hidden||!$('#pg').hidden)return;if(
 (function(){
 var $=function(s){return document.querySelector(s)},reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
 var al=$('#al');al.dataset.v='grid';
-var lh=document.createElement('div');lh.className='lh';lh.innerHTML='<span>Tahun</span><span>Nama</span><span>Kategori</span>';var alb=$('#alb');alb.insertBefore(lh,alb.firstChild);
+var lh=document.createElement('div');lh.className='lh';lh.innerHTML='<span>Year</span><span>Name</span><span>Category</span>';var alb=$('#alb');alb.insertBefore(lh,alb.firstChild);
 function home(){if(!$('#pg').hidden)$('#pg-x').click();if(!al.hidden)$('#al-x').click();if(!$('#menu').hidden)$('#menu-x').click();if(!$('#ab').hidden)$('#ab-x').click();setTimeout(function(){scrollTo({top:0,behavior:reduce?'auto':'smooth'})},reduce?0:400)}
 [].slice.call(document.querySelectorAll('.hb')).forEach(function(b){b.addEventListener('click',home)});
 })();
@@ -1210,7 +1264,7 @@ $('#ab-x').addEventListener('click',closeAbout);
 addEventListener('keydown',function(e){if(ab.hidden)return;if(e.key==='Escape')closeAbout()});
 // back-to-top buttons on every page
 var CARET='<svg viewBox="0 90 512 330" fill="currentColor" stroke="currentColor" stroke-width="44" stroke-linejoin="round" aria-hidden="true"><path d="M256 140L480 385H32Z"/></svg>';
-function tt(parent,getTop,toTop,watch){var b=document.createElement('button');b.className='tt';b.setAttribute('aria-label','Kembali ke atas');b.innerHTML=CARET;b.addEventListener('click',toTop);parent.appendChild(b);
+function tt(parent,getTop,toTop,watch){var b=document.createElement('button');b.className='tt';b.setAttribute('aria-label','Back to top');b.innerHTML=CARET;b.addEventListener('click',toTop);parent.appendChild(b);
  function upd(){b.classList.toggle('show',getTop()>320)}watch(upd);upd();return upd}
 tt(document.body,function(){return scrollY},function(){scrollTo({top:0,behavior:reduce?'auto':'smooth'})},function(u){addEventListener('scroll',u,{passive:true})});
 ['pg','al','ab'].forEach(function(id){var el=document.getElementById(id);
@@ -1271,6 +1325,17 @@ function ctr(t){var i=t&&t.closest&&t.closest(IT);return i?i.closest('.hov,.sn,.
 function h(e){var c=ctr(e.target);if(c)requestAnimationFrame(function(){sync(c)})}
 ['pointerover','pointerout','focusin','focusout'].forEach(function(n){document.addEventListener(n,h,true)});
 new MutationObserver(function(ms){ms.forEach(function(m){var c=ctr(m.target);if(c)sync(c)})}).observe(document.body,{subtree:true,attributes:true,attributeFilter:['class']});
+})();
+</script>
+<script>
+(function(){
+var kk=document.getElementById('kk'),lastK=null;
+function openKK(){lastK=document.activeElement;kk.classList.add('open');document.body.style.overflow='hidden';kk.scrollTop=0;setTimeout(function(){document.getElementById('kk-x').focus({preventScroll:true})},60)}
+function closeKK(){if(!kk.classList.contains('open'))return;kk.classList.remove('open');if(document.getElementById('al').hidden&&document.getElementById('pg').hidden&&document.getElementById('ab').hidden&&document.getElementById('menu').hidden)document.body.style.overflow='';if(lastK&&lastK.focus)lastK.focus({preventScroll:true})}
+window.openKK=openKK;window.closeKK=closeKK;
+document.getElementById('kk-x').addEventListener('click',closeKK);
+document.getElementById('kk-home').addEventListener('click',closeKK);
+addEventListener('keydown',function(e){if(e.key==='Escape'&&kk.classList.contains('open')&&document.getElementById('pg').hidden&&document.getElementById('al').hidden&&document.getElementById('lb').hidden&&document.getElementById('vw').hidden)closeKK()});
 })();
 </script>
 </body>
