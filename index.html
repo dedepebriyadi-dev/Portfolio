@@ -814,6 +814,30 @@ nav{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;backgr
 nav::before,nav::after{display:none!important}
 /* mobile order: Education, Experience, Skills, Software, Achievements */
 @media(max-width:800px){.cvc{display:contents}.cvs-ed{order:1}.cvs-ex{order:2}.cvs-sk{order:3}.cvs-sw{order:4}.cvs-ac{order:5}}
+
+/* brand folders (PT Sumber Digital Media) */
+.bwrap{margin-top:clamp(28px,4vw,56px)}
+.bfolds{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(14px,2vw,28px)}
+.bfold{all:unset;box-sizing:border-box;cursor:pointer;position:relative;display:flex;flex-direction:column;gap:10px;min-height:clamp(200px,22vw,280px);padding:clamp(22px,2.6vw,36px);border:1px solid #333;border-radius:0 18px 18px 18px;color:#fff;margin-top:22px;transition:border-color .45s var(--ez),background .45s var(--ez),transform .45s var(--ez)}
+.bfold .bft{position:absolute;left:-1px;top:-22px;width:clamp(86px,9vw,130px);height:22px;border:1px solid #333;border-bottom:0;border-radius:12px 12px 0 0;background:#0a0a0a;transition:border-color .45s var(--ez)}
+.bfold:hover,.bfold:focus-visible{border-color:#fff;background:#111;transform:translateY(-3px)}
+.bfold:hover .bft,.bfold:focus-visible .bft{border-color:#fff}
+.bfold:focus-visible{outline:2px solid #fff;outline-offset:4px}
+.bfn{font-size:clamp(34px,4.6vw,68px);font-weight:600;letter-spacing:-.05em;line-height:1;margin-top:auto}
+.bfc{font-size:clamp(15px,1.3vw,19px);font-weight:500}
+.bfs{font-size:clamp(13px,1.05vw,16px);color:#8a8a8a;line-height:1.4;max-width:30em}
+.bfa{position:absolute;right:clamp(20px,2.4vw,32px);top:clamp(18px,2vw,28px);font-style:normal;font-size:clamp(26px,2.4vw,36px);line-height:1}
+.bfold.empty{border-style:dashed}.bfold.empty .bfc{color:#8a8a8a}
+.bsec{margin-top:clamp(36px,5vw,64px)}
+.bh{margin:0 0 clamp(14px,2vw,24px);font-size:clamp(22px,2.4vw,34px);font-weight:600;letter-spacing:-.04em;line-height:1.05;color:#fff}
+.bgr{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:clamp(14px,2vw,24px)}
+.bcard{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;gap:6px;color:#fff;font-size:clamp(15px,1.25vw,18px);transition:opacity .45s var(--ez)}
+.bcard .bth{display:block;aspect-ratio:16/9;background-size:cover;background-position:center;background-color:#111;margin-bottom:6px}
+.bcard b{font-weight:600}.bcard .bm{color:#8a8a8a;font-size:.88em}
+.bgr:has(.bcard:hover) .bcard:not(:hover){opacity:.45}
+.bcard:focus-visible{outline:2px solid #fff;outline-offset:4px}
+.bempty{color:#8a8a8a;margin:24px 0 0}
+@media(max-width:700px){.bfolds{grid-template-columns:minmax(0,1fr)}}
 </style>
 </head>
 <body>
@@ -881,7 +905,7 @@ nav::before,nav::after{display:none!important}
  <div class="mh"><button class="bk" id="ab-x" aria-label="Back"><svg viewBox="0 0 512 512" aria-hidden="true"><circle cx="256" cy="256" r="224" stroke-width="34"/><path d="M308 150L209 245Q192 258 209 272L308 364" stroke-width="34" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></button></div>
  <div class="abb">
   <div class="abw"><figure class="abp"><img id="ab-img" alt="Black-and-white portrait of Dede Pebriyadi in a photo studio" decoding="async"></figure><h2 class="abt" id="abt" aria-label="Dede Pebriyadi"><span aria-hidden="true">Dd-</span><span aria-hidden="true">PEBRI-</span><span aria-hidden="true">yd</span></h2></div>
-  <div class="abs"><span class="abl">(Profile)</span><p class="abx hov">I graduated in Visual Communication Design from Institut Teknologi Nasional Bandung (2024). I currently work as a Graphic &amp; Brand Designer at Roomi Indonesia, creating social media designs, promotional materials, and product packaging. I’m used to working in creative teams to deliver effective visual solutions that fit the brief. Outside of design, I’m passionate about photography, and I won 1st Place at the CTR Photo Contest (2016) and 3rd Place at Klise Fotografi UGJ (2017).</p></div>
+  <div class="abs"><span class="abl">(Profile)</span><p class="abx hov">I graduated in Visual Communication Design from Institut Teknologi Nasional Bandung (2024). I currently work as a Graphic Designer at PT Sumber Digital Media, where I handle the Roomi and Tanaka brands and create social media designs, promotional materials, and product packaging. I’m used to working in creative teams to deliver effective visual solutions that fit the brief. Outside of design, I’m passionate about photography, and I won 1st Place at the CTR Photo Contest (2016) and 3rd Place at Klise Fotografi UGJ (2017).</p></div>
   <div class="abs"><span class="abl">(Contact)</span><div class="abk"><a href="https://wa.me/6281944245544">WhatsApp</a><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=dedepebriyadi@gmail.com" target="_blank" rel="noopener">Email</a></div></div>
   <div class="abs"><span class="abl">(Social)</span><div class="abk"><a href="https://www.behance.net/Pebriyadi04" target="_blank" rel="noopener">Behance</a><a href="https://www.linkedin.com/in/dede-pebriyadi-536b2b266/" target="_blank" rel="noopener">LinkedIn</a></div></div>
   <div class="abs"><span class="abl">(Location)</span><div class="abk"><span>BDG/JKT/IDN</span></div></div>
@@ -944,7 +968,7 @@ var W=[
 {k:'bj',c:'sosmed',t:'bahasajerman.id',m:'Social media',d:'Learning content on German transportation vocabulary and telling the time, designed to be easy to read and save.',g:'linear-gradient(135deg,#2a3c9a,#4a68d8)',x:'#fff'}
 ];
 window.PW=W;var X=[
-{time:'Aug 2024 – present',t:'Graphic & Brand Designer',co:'Roomi Indonesia',sub:'PT. Sumber Digital Media',li:['Motion graphics and visual materials for the ROOMI × TANAKA booth activation at Jakarta Fair (PRJ) 2026.','Social media designs aligned with the brand identity.','Posters, digital banners, and promotional materials for company events.','Product packaging and visual materials for retail stores.','Event assets such as backdrops and flyers.'],g:'linear-gradient(135deg,#7a4fd0,#e2509a)',x:'#fff',acts:[['Open Roomi Activation at PRJ 2026','p','prj2026'],['View Roomi work','f','roomi'],['Open packaging gallery','o','roomi-pack']]},
+{time:'Aug 2024 – present',t:'Graphic Designer (Roomi & Tanaka)',co:'PT Sumber Digital Media',sub:'Roomi & Tanaka',li:['Motion graphics and visual materials for the ROOMI × TANAKA booth activation at Jakarta Fair (PRJ) 2026.','Social media designs aligned with the brand identity.','Posters, digital banners, and promotional materials for company events.','Product packaging and visual materials for retail stores.','Event assets such as backdrops and flyers.'],g:'linear-gradient(135deg,#7a4fd0,#e2509a)',x:'#fff',acts:[['Open Roomi Activation at PRJ 2026','p','prj2026'],['View Roomi work','f','roomi'],['Open packaging gallery','o','roomi-pack']]},
 {time:'Nov 2023 – Feb 2024',t:'Advertising Designer',co:'Memo Multimedia',sub:'PT. Memo Multimedia Organizer',li:['Daily social media content, from informative to promotional.','Consistent visual identity across all platforms.'],g:'linear-gradient(135deg,#4a3fa8,#2b6fc0)',x:'#fff',acts:[['Open Memo gallery','o','memo'],['All social media work','f','sosmed']]},
 {time:'Mar 2023 – Jun 2023',t:'Advertising Designer',co:'Oz Radio Bandung',sub:'Partnership proposals and company profile',li:['Compiled weekly music charts for broadcast programs.','Proposals for sponsors, brands, and event organizers.','Updating the Oz Radio company profile.'],g:'linear-gradient(135deg,#f0b92c,#f4893a)',x:'#2b1700',acts:[['Open company profile','o','oz3'],['All book layouts','f','book']]}
 ];
@@ -1084,7 +1108,7 @@ var pg=$('#pg'),pgb=$('#pgb'),lastF=null,reduce=matchMedia('(prefers-reduced-mot
 var CAT={sosmed:'Social media',identity:'University work · Visual identity',info:'University work · Infographics',book:'Book layout',roomi:'Graphic & brand design'};
 var CL={'prj2026':['Roomi × TANAKA','2026'],'xmas2025':['Roomi','2025'],'roomi-tv':['Roomi','2025'],'roomi-rollup':['Roomi','2025'],'roomi-feed':['Roomi','2024 – 2025'],'roomi-flyer':['Roomi','2024'],'roomi-pack':['Roomi','2024 – 2025'],plangon:['Plangon Heritage Site','2024'],trengginas:['Trengginas Offroad Team','2021'],oz1:['Oz Radio Bandung','2023'],oz2:['Oz Radio Bandung','2023'],oz3:['Oz Radio Bandung','2023'],memo:['Memo Multimedia','2023 – 2024'],intercoder:['interCoder',''],bj:['bahasajerman.id',''],gwk:['Garuda Wisnu Kencana','2021']};
 var E=[
-{t:'Roomi Indonesia',role:'Graphic & Brand Designer',yr:'2024 – present',cat:'Social media · Packaging · Promotion · Event activation · Motion graphics',cover:'roomi-feed',lg:'roomi',g:'linear-gradient(135deg,#7a4fd0,#e2509a)',keys:['prj2026','xmas2025','roomi-tv','roomi-rollup','roomi-feed','roomi-flyer','roomi-pack'],d:'Motion graphics and visual materials for the ROOMI × TANAKA booth activation at Jakarta Fair (PRJ) 2026, plus the looping motion video Roomi Blue Christmas / Roomi PR Package (2025). Social media designs aligned with the brand identity, as well as posters, digital banners, and promotional materials for company events. TV display materials for in-store campaigns, product packaging, and visual materials for retail stores. Event assets such as backdrops, flyers, and roll-up banners.'},
+{t:'PT Sumber Digital Media',role:'Graphic Designer (Roomi & Tanaka)',yr:'2024 – present',cat:'Social media · Packaging · Promotion · Event activation · Motion graphics',cover:'roomi-feed',lg:'roomi',g:'linear-gradient(135deg,#7a4fd0,#e2509a)',keys:['prj2026','xmas2025','roomi-tv','roomi-rollup','roomi-feed','roomi-flyer','roomi-pack'],d:'Handle the full visual design and packaging workflow for the company’s two main brands, Roomi and Tanaka. Manage the creative process end-to-end, from visual research and concept development to print-ready files and ready-to-publish materials. Design Product Detail Pages (PDP) for e-commerce, along with digital promotional materials and marketing visual assets that boost engagement and brand appeal. Create social media designs aligned with each brand identity, plus posters and digital banners for company promotions. Produce in-store and event materials, including TV display content, backdrops, flyers, roll-up banners, and retail store visuals.'},
 {t:'Memo Multimedia',role:'Advertising Designer',yr:'2023 – 2024',cat:'Social media',cover:'memo',lg:'memo',g:'linear-gradient(135deg,#4a3fa8,#2b6fc0)',keys:['memo','intercoder','bj'],d:'Daily social media content, from informative to promotional, with a consistent visual brand identity across all platforms.'},
 {t:'Oz Radio Bandung',role:'Advertising Designer',yr:'2023',cat:'Book layout · Proposals',cover:'oz1',lg:'oz',g:'linear-gradient(135deg,#f0b92c,#f4893a)',keys:['oz1','oz2','oz3'],d:'Compiled weekly music charts for broadcast programs, wrote partnership proposals for sponsors, brands, and event organizers, and helped update the Oz Radio company profile.'}
 ];
@@ -1129,6 +1153,30 @@ function closePage(){if(!$('#vw').hidden)vclose();pg.classList.remove('open');se
 $('#pg-x').onclick=closePage;
 addEventListener('keydown',function(e){if(pg.hidden||!$('#vw').hidden)return;if(e.key==='Escape')closePage();else if(e.key==='Tab'){var f=[$('#pg-x'),$('#pg-back')].filter(Boolean),i=f.indexOf(document.activeElement);e.preventDefault();f[(i+(e.shiftKey?-1:1)+f.length)%f.length].focus()}});
 window.openProject=function(w){var c=CL[w.k]||['',''],cols=[['Client',c[0]],['Category',(w.cat||CAT[w.c])||'']];if(c[1])cols.push(['Year',c[1]]);openPage({t:w.t,cols:cols,cr:w.cr,video:w.v?{src:w.v,poster:w.vp}:null,imgs:IMG[w.k],thumbs:(window.GT&&GT[w.k])||null,hero:!(w.k==='plangon'||w.k==='gwk'||w.k==='roomi-rollup'||!IMG[w.k].length),d:w.d,g:w.g})};
+var BRANDS=[
+ {id:'roomi',name:'Roomi',groups:[['Campaign & Event Activation',['prj2026','roomi-tv']],['Motion Graphics',['xmas2025']],['Social Media & Digital Ads',['roomi-feed']],['Print Media',['roomi-flyer','roomi-rollup']],['Packaging',['roomi-pack']]]},
+ {id:'tanaka',name:'Tanaka',groups:[]}];
+function bkeys(b){return [].concat.apply([],b.groups.map(function(g){return g[1]}))}
+function bsub(b){return b.groups.length?b.groups.map(function(g){return g[0]}).join(' \u00b7 '):'Folder ready for upcoming work'}
+function binsert(){var pb=document.getElementById('pgb'),end=pb.querySelector('.pgend'),w=mk('div','bwrap');pb.insertBefore(w,end);return w}
+function openBrands(e){
+ openPage({t:e.t,cols:[['Company',e.t],['Role',e.role],['Year',e.yr]],imgs:[],hero:false,d:'Work handled for the company\u2019s two brands. Open a brand folder to see the work by category.'});
+ var w=binsert(),g=mk('div','bfolds');
+ BRANDS.forEach(function(b){var n=bkeys(b).length,f=mk('button','bfold'+(n?'':' empty'));f.type='button';f.setAttribute('aria-label','Open '+b.name+' folder');
+  f.appendChild(mk('span','bft'));f.appendChild(mk('b','bfn',b.name));f.appendChild(mk('span','bfc',n?n+(n===1?' project':' projects'):'No projects yet'));f.appendChild(mk('span','bfs',bsub(b)));f.appendChild(mk('i','bfa','\u203a'));
+  f.addEventListener('click',function(){openBrand(b,e)});g.appendChild(f)});
+ w.appendChild(g)}
+function openBrand(b,e){
+ var n=bkeys(b).length;
+ openPage({t:b.name,cols:[['Company',e.t],['Role',e.role],['Projects',String(n)]],imgs:[],hero:false,d:n?'Work for '+b.name+' at '+e.t+', grouped by category.':'Work for '+b.name+' will appear here. No projects have been added yet.'});
+ var w=binsert(),back=mk('button','cvgo','\u2039 All folders');back.type='button';back.addEventListener('click',function(){openBrands(e)});w.appendChild(back);
+ b.groups.forEach(function(gr){
+  var sec=mk('div','bsec');sec.appendChild(mk('h3','bh',gr[0]));var grid=mk('div','bgr');
+  gr[1].forEach(function(k){var pw=(window.PW||[]).filter(function(x){return x.k===k})[0];if(!pw)return;
+   var c=mk('button','bcard');c.type='button';c.appendChild(mk('span','bth k-'+k));c.appendChild(mk('b',null,pw.t));c.appendChild(mk('span','bm',pw.m));
+   c.addEventListener('click',function(){window.openProject(pw)});grid.appendChild(c)});
+  sec.appendChild(grid);w.appendChild(sec)});
+ if(!n){var em=mk('p','bempty','Nothing here yet.');w.appendChild(em)}}
 var xl=$('#xlist');xl.className='cv';
 function cvs(t,c){var d=mk('div','cvs'+(c?' '+c:''));d.appendChild(mk('h3','cvh',t));return d}
 function cvrow(date,head,lines){var r=mk('div','cvrow');r.appendChild(mk('span','cvd',date));var b=mk('div','cvb');b.appendChild(mk('b',null,head));(lines||[]).forEach(function(l){b.appendChild(l)});r.appendChild(b);return r}
@@ -1144,7 +1192,7 @@ E.forEach(function(e){
  var p2=mk('p');p2.appendChild(mk('b',null,'Description:'));
  var ul=mk('ul');e.d.replace(/\.$/,'').split(/\.\s+/).forEach(function(t){ul.appendChild(mk('li',null,t+'.'))});
  var gb=mk('button','cvgo','View work \u203a');gb.type='button';gb.setAttribute('aria-label','Open work '+e.t);
- function go(){openPage({t:e.t,cols:[['Company',e.t],['Role',e.role],['Year',e.yr]],imgs:[].concat.apply([],e.keys.map(function(k){return IMG[k]})),videos:[].concat.apply([],e.keys.map(function(k){var w=(window.PW||[]).filter(function(x){return x.k===k})[0];return w&&w.v?[{src:w.v,poster:w.vp,label:'Motion \u00b7 '+w.t}]:[]})),d:e.d})}
+ function go(){if(e.t==='PT Sumber Digital Media'){openBrands(e);return}openPage({t:e.t,cols:[['Company',e.t],['Role',e.role],['Year',e.yr]],imgs:[].concat.apply([],e.keys.map(function(k){return IMG[k]})),videos:[].concat.apply([],e.keys.map(function(k){var w=(window.PW||[]).filter(function(x){return x.k===k})[0];return w&&w.v?[{src:w.v,poster:w.vp,label:'Motion \u00b7 '+w.t}]:[]})),d:e.d})}
  gb.addEventListener('click',go);
  ex.appendChild(cvrow(e.yr,e.t,[p1,p2,ul,gb]));
 });
